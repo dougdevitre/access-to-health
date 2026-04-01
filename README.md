@@ -31,6 +31,117 @@ Missouri reference implementation. Nationally applicable.
 | **Policy Advocate** | `roles/remaining-roles.md` → Legislative tracking, HIA, coalitions, HiAP |
 | **All 20 roles** | `roles/ROLE-REGISTRY.md` → Full index with pod structure and routing |
 
+## How It Works
+
+### System Routing Loop
+
+```mermaid
+flowchart LR
+    A[User Input] --> B[Role Identification]
+    B --> C[Population Context]
+    C --> D[Command / Workflow]
+    D --> E[Artifact Generation]
+    E --> F{Cross-Role Handoff?}
+    F -- Yes --> B
+    F -- No --> G[Deliver Output]
+```
+
+### Role Pod Structure
+
+```mermaid
+flowchart TD
+    R[20 Public Health Roles] --> P1[Surveillance Pod]
+    R --> P2[Community Pod]
+    R --> P3[Clinical Pod]
+    R --> P4[Behavioral Health Pod]
+    R --> P5[Maternal-Child Health Pod]
+    R --> P6[Education Pod]
+    R --> P7[Environment Pod]
+    R --> P8[Policy & Leadership Pod]
+    R --> P9[Operations Pod]
+
+    P1 --> P1a[Epidemiologist]
+    P1 --> P1b[Disease Intervention Specialist]
+    P1 --> P1c[Data Analyst]
+    P2 --> P2a[Community Health Worker]
+    P2 --> P2b[Community Engagement Specialist]
+    P3 --> P3a[Public Health Nurse]
+    P3 --> P3b[Oral Health Coordinator]
+    P4 --> P4a[Behavioral Health Clinician]
+    P4 --> P4b[Substance Use Prevention]
+    P5 --> P5a[MCH Specialist]
+    P5 --> P5b[Nutritionist]
+    P6 --> P6a[Health Educator]
+    P6 --> P6b[School Health Coordinator]
+    P7 --> P7a[Environmental Health Specialist]
+    P8 --> P8a[Health Director]
+    P8 --> P8b[Policy Advocate]
+    P9 --> P9a[Program Manager]
+    P9 --> P9b[QI Coordinator]
+```
+
+### SDOH Screening and Navigation Flow
+
+```mermaid
+flowchart TD
+    S1[Screen Patient] --> S2{Which Tool?}
+    S2 --> T1[PRAPARE]
+    S2 --> T2[AHC Screen]
+    S2 --> T3[Quick Screen]
+    T1 & T2 & T3 --> S3[Risk Scoring Algorithm]
+    S3 --> S4[Match Resources by Domain]
+    S4 --> D1[Housing]
+    S4 --> D2[Food]
+    S4 --> D3[Income]
+    S4 --> D4[Health Care]
+    S4 --> D5[Education]
+    S4 --> D6[Safety]
+    S4 --> D7[Transportation]
+    S4 --> D8[Utilities]
+    S4 --> D9[Childcare]
+    D1 & D2 & D3 & D4 & D5 & D6 & D7 & D8 & D9 --> S5{Tier?}
+    S5 --> R1[Emergency / Immediate]
+    S5 --> R2[Short-Term]
+    S5 --> R3[Long-Term]
+    R1 & R2 & R3 --> S6[Warm Handoff Referral]
+    S6 --> S7[Follow-Up & Outcome Tracking]
+```
+
+### Cross-Role Workflow: Disease Outbreak Response
+
+```mermaid
+flowchart TD
+    A[Report Received — lab, provider, school] --> B[Epidemiologist: Initial Assessment 0-2 hrs]
+    B --> C[Assemble Investigation Team 2-4 hrs]
+    C --> D1[Case Interviews → Line List & Epi Curve — EPI]
+    C --> D2[Environmental Assessment — EHS]
+    C --> D3[Specimen Collection — Lab / PHN]
+    C --> D4[Community Notification Drafting — HCS]
+    D1 & D2 & D3 & D4 --> E[Preliminary Analysis 4-12 hrs]
+    E --> F[SitRep #1 to Health Director]
+    F --> G[Control Measures Implementation 12-24 hrs]
+    G --> H{Public Communication Warranted?}
+    H -- Yes --> I[Media / Community Messaging]
+    H -- No --> J[Continued Monitoring]
+    I --> J
+    J --> K[Daily / Weekly SitReps Until Resolved]
+    K --> L[Final Investigation Report & After-Action Review]
+```
+
+### Command Execution Model
+
+```mermaid
+flowchart LR
+    U[User] -->|slash command| CMD[Command Router]
+    CMD --> I[INPUT: Validate Parameters]
+    I --> P[PROCESS: Execute Logic]
+    P --> O[OUTPUT: Generate Artifact]
+    O --> ERR{Errors?}
+    ERR -- Yes --> H[ERROR: Guidance & Recovery]
+    ERR -- No --> D[Deliver to User]
+    H --> I
+```
+
 ## File Structure
 
 ```
