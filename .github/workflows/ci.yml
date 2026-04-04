@@ -1,0 +1,136 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript compile
+        run: npm run build
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Markdown lint
+        run: npm run lint:md
+
+  validate-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify expected files exist
+        run: |
+          missing=0
+          while IFS= read -r f; do
+            if [ ! -f "$f" ]; then
+              echo "MISSING: $f"
+              missing=$((missing + 1))
+            fi
+          done <<'FILES'
+          SKILL.md
+          README.md
+          AUDIT.md
+          NAVIGATION.md
+          CONTRIBUTING.md
+          LICENSE
+          roles/ROLE-REGISTRY.md
+          roles/epi.md
+          roles/chw.md
+          roles/phn.md
+          roles/hdo.md
+          roles/priority-roles.md
+          roles/remaining-roles.md
+          roles/all-roles.md
+          populations/POPULATION-REGISTRY.md
+          populations/deep-dives/black-african-american.md
+          populations/deep-dives/all-deep-dives.md
+          workflows/cross-role-workflows.md
+          workflows/cross-role-workflows-expanded.md
+          commands/COMMANDS.md
+          commands/COMMAND-SPECS.md
+          communication/internal-playbook.md
+          communication/external-playbook.md
+          features/sdoh-screener.md
+          features/resource-navigator.md
+          features/advocacy-toolkit.md
+          features/education-toolkit.md
+          messaging/campaign-builder.md
+          messaging/social-media-library.md
+          messaging/trust-rebuilding-playbook.md
+          messaging/email-sequences.md
+          artifacts/reporting-templates.md
+          artifacts/role-artifacts.md
+          references/apha-knowledgebase.md
+          references/apha-url-index.md
+          references/fiscal-crisis-brief.md
+          references/funding-guide.md
+          references/missouri-public-health.md
+          bilingual/spanish-layer.md
+          mcp/MCP-SCHEMA.md
+          evals/EVAL-SUITE.md
+          scripts/team-sops.md
+          schemas/sdoh-data-model.json
+          schemas/fhir-sdoh-mapping.json
+          templates/grant-and-policy-templates.md
+          tools/sdoh-score.ts
+          tools/campaign-generator.ts
+          tools/roi-calculator.ts
+          tools/apha-fetcher.js
+          assets/ai-prompt-library.md
+          assets/data-reference.md
+          assets/engagement-calendar.csv
+          integration/developer-guide.md
+          integration/city-planning-health.md
+          integration/fiscal-operations.md
+          integration/government-toolkit.md
+          integration/health-tech-vendor-guide.md
+          integration/cross-sector-data-standards.md
+          FILES
+
+          if [ "$missing" -gt 0 ]; then
+            echo "ERROR: $missing file(s) missing"
+            exit 1
+          else
+            echo "All expected files present"
+          fi
+
+      - name: Verify JSON schemas are valid
+        run: |
+          for f in schemas/*.json; do
+            python3 -c "import json; json.load(open('$f'))" && echo "VALID: $f" || exit 1
+          done
+
+      - name: Count files and words
+        run: |
+          files=$(find . \( -name "*.md" -o -name "*.json" -o -name "*.csv" -o -name "*.ts" -o -name "*.js" \) ! -path "./.git/*" ! -path "./node_modules/*" | wc -l)
+          words=$(find . -name "*.md" ! -path "./.git/*" ! -path "./node_modules/*" -print0 | xargs -0 wc -w | tail -1 | awk '{print $1}')
+          echo "Files: $files"
+          echo "Words: $words"

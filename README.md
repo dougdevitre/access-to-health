@@ -179,10 +179,18 @@ access-to-health/                        46 files │ ~80,000 words
 │
 ├── populations/                         25 POPULATIONS + 10 DEEP DIVES
 │   ├── POPULATION-REGISTRY.md        ✅ Master registry (25 populations, routing, SDOH matrix)
-│   └── deep-dives/
-│       ├── black-african-american.md ✅ Full deep dive (disparities, history, culture, engagement)
-│       └── all-deep-dives.md         ✅ Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
-│                                         Older Adults, Justice-Involved, Rural
+│   └── deep-dives/                      Individual population files
+│       ├── black-african-american.md ✅ Full deep dive
+│       ├── hispanic-latino.md        ✅ Full deep dive
+│       ├── pregnant-postpartum.md    ✅ Full deep dive
+│       ├── homeless.md               ✅ Full deep dive
+│       ├── people-who-use-drugs.md   ✅ Full deep dive
+│       ├── immigrant-refugee.md      ✅ Full deep dive
+│       ├── lgbtq.md                  ✅ Full deep dive
+│       ├── older-adults.md           ✅ Full deep dive
+│       ├── justice-involved.md       ✅ Full deep dive
+│       ├── rural.md                  ✅ Full deep dive
+│       └── all-deep-dives.md         ✅ Combined reference (all 9 above)
 │
 ├── workflows/                           8 CROSS-ROLE WORKFLOWS
 │   ├── cross-role-workflows.md       ✅ Original summaries (quick reference)
@@ -271,4 +279,4 @@ MIT — Use freely. Attribution appreciated.
 
 ## Contact
 
-Doug Devitre — [cotrackpro.com](https://cotrackpro.com) — dougdevitre@gmail.com
+Doug Devitre — [cotrackpro.com](https://cotrackpro.com) — <dougdevitre@gmail.com>

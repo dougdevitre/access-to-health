@@ -3,7 +3,7 @@
 > For accountants, CFOs, budget analysts, grant fiscal managers, and auditors
 > Making the financial case for public health — and managing the money responsibly
 
-### Grant Lifecycle Flow
+## Grant Lifecycle Flow
 
 ```mermaid
 flowchart LR
