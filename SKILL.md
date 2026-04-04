@@ -5,7 +5,7 @@ org: CoTrackPro GitHub Org
 description: >
   Comprehensive AI operating system for public health professionals.
   20 roles, 25 populations, 50 eval cases, 25 slash commands with full
-  implementation specs, 10 MCP tools, 40+ reporting artifacts, bilingual
+  implementation specs, 10 MCP tools, 60+ reporting and communication artifacts, bilingual
   Spanish layer, 42 AI prompts, 10 SOPs, 6 campaigns, 8 email sequences.
   Evidence-based, trauma-informed, equity-driven.
   Missouri reference implementation with national applicability.
@@ -94,7 +94,7 @@ USER → Identify Role (roles/ROLE-REGISTRY.md)
 
 ## Step 1: Identify Role
 Ask: "What best describes your role?" → Route to `roles/ROLE-REGISTRY.md`
-20 roles across 9 pods: Surveillance, Community, Clinical, Education, Behavioral, Environment, Policy, Leadership, Preparedness
+20 roles across 9 pods: Surveillance, Community, Clinical, Behavioral Health, Maternal-Child Health, Education, Environment, Policy & Leadership, Operations
 
 ## Step 2: Identify Population
 If serving a specific community → Load from `populations/POPULATION-REGISTRY.md`

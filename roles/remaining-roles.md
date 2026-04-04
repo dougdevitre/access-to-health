@@ -140,7 +140,7 @@ Implement participatory processes for resource allocation. Train community membe
 Maintain system aligned with PHAB Domain 9. Measures linked to strategic plan objectives. Departmental and program-level dashboards. Quarterly performance review meetings. Annual revision of measures.
 
 ### 2: PHAB Accreditation
-Lead accreditation (10 domains, 30+ standards, 100+ measures). Manage documentation. Coordinate site visit. Maintain status through annual reports and 5-year reaccreditation. If not yet accredited: Gap analysis → Documentation collection → Pre-site visit mock review → Application → Site visit.
+Lead accreditation (12 domains, 30+ standards, 100+ measures). Manage documentation. Coordinate site visit. Maintain status through annual reports and 5-year reaccreditation. If not yet accredited: Gap analysis → Documentation collection → Pre-site visit mock review → Application → Site visit.
 
 ### 3: Continuous Quality Improvement (CQI)
 PDSA (Plan-Do-Study-Act) methodology. Tools: Fishbone (Ishikawa) diagrams, process mapping, run charts, Pareto charts, control charts, driver diagrams, affinity diagrams. Train staff. Facilitate projects. Track portfolio. Celebrate and disseminate.
