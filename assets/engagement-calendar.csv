@@ -1,0 +1,53 @@
+Week,Month,Health Observance,Key Actions,Roles,Population Focus
+1,January,National Birth Defects Prevention Month,Folic acid messaging; prenatal referrals,PHN MCH HED,PRG
+2,January,Cervical Cancer Awareness Month,Pap test reminders; HPV vaccine push,PHN HED HCS,BLK HIS
+3,January,National Mentoring Month,Youth health mentoring; school partnerships,SHC HED CHW,CHD
+4,January,MLK Day of Service,Community health event; health equity messaging,CES CHW HCS,BLK
+5,February,American Heart Month,BP screening events; heart health education,PHN CHW HED,BLK OAD
+6,February,National Black HIV/AIDS Awareness Day (Feb 7),HIV testing events; PrEP outreach,DIS PHN CHW,BLK
+7,February,National Eating Disorders Awareness Week,Screening; resource distribution,BHC HED NUT,CHD COL
+8,February,Teen Dating Violence Awareness Month,School presentations; safety planning,SHC BHC HED,CHD
+9,March,National Nutrition Month,Cooking demos; WIC enrollment push,NUT CHW HED,LIW HIS
+10,March,National Drug & Alcohol Facts Week,Youth prevention education,SUP SHC HED,CHD
+11,March,World TB Day (Mar 24),TB awareness; screening reminders,DIS PHN EPI,IMM
+12,March,National Poison Prevention Week,Child safety messaging; lead screening,EHS PHN HED,CHD
+13,April,National Minority Health Month,Health equity data release; community forums,CES EPI HCS,BLK HIS NAT API
+14,April,Black Maternal Health Week (Apr 11-17),Doula promotion; maternal health campaign,MCH CHW CES,BLK PRG
+15,April,National Public Health Week,Staff recognition; community awareness,HDO HCS ALL,ALL
+16,April,STD Awareness Month,Free STI testing events,DIS PHN CHW,PWUD LGBT
+17,May,Mental Health Awareness Month,988 promotion; stigma reduction campaign,BHC HCS HED,MHC
+18,May,National Women's Health Week,Women's health screenings; resource fairs,PHN MCH CHW,PRG
+19,May,Hepatitis Awareness Month,Hep B/C testing; immigrant health screening,PHN DIS CHW,IMM PWUD
+20,May,Global Health and Fitness Day,Community wellness events; walking groups,HED CES CHW,ALL
+21,June,National Safety Month,Injury prevention; car seat checks; water safety,EHS PHN SHC,CHD
+22,June,LGBTQ+ Pride Month,Affirming care promotion; resource distribution,BHC CHW CES,LGBT
+23,June,Men's Health Month,Prostate/colon screening; mental health for men,PHN HED BHC,BLK VET
+24,June,Juneteenth,Community celebration; health equity focus,CES CHW HCS,BLK
+25,July,UV Safety Month; Fireworks Safety,Skin cancer prevention; injury prevention,EHS HED PHN,ALL RUR
+26,July,National Minority Mental Health Awareness Month,Culturally responsive MH outreach,BHC CES CHW,BLK HIS NAT
+27,July,World Hepatitis Day (Jul 28),Testing events; treatment linkage,DIS PHN CHW,PWUD IMM
+28,July,Back-to-School Prep Begins,Immunization catch-up clinics; school supply drives,PHN SHC CHW,CHD LIW
+29,August,National Immunization Awareness Month,Vaccination campaigns; school compliance push,PHN SHC HCS,CHD
+30,August,National Breastfeeding Month,Lactation support; WIC enrollment,NUT MCH PHN,PRG
+31,August,Overdose Awareness Day (Aug 31),Naloxone distribution; memorial events,SUP CHW BHC,PWUD
+32,August,Back to School,School screenings; immunization clinics; health kits,SHC PHN CHW,CHD
+33,September,Suicide Prevention Month,988 campaign; gatekeeper training; safe messaging,BHC SHC HCS,MHC CHD VET
+34,September,National Recovery Month,Recovery celebration; treatment access promotion,SUP BHC CES,PWUD
+35,September,National Preparedness Month,Emergency preparedness education; supply kits,EPC HCS HED,ALL RUR
+36,September,Childhood Obesity Awareness Month,Active living campaign; school nutrition,NUT SHC HED,CHD
+37,October,Breast Cancer Awareness Month,Mammography events; Show-Me Healthy Women,PHN HCS CHW,BLK LIW
+38,October,Health Literacy Month,Plain language audit; patient education materials,HED HCS CHW,LEP LIW
+39,October,Lead Poisoning Prevention Week,Blood lead testing; housing inspection push,EHS PHN CHW,CHD BLK
+40,October,National Domestic Violence Awareness Month,DV resources; safety planning; staff training,BHC PHN CES,PRG
+41,November,National Diabetes Month,A1c screening; DPP enrollment; cooking classes,PHN NUT HED CHW,BLK HIS NAT OAD
+42,November,Prematurity Awareness Month,Birth equity campaign; NICU family support,MCH PHN CHW,BLK PRG
+43,November,Great American Smokeout (3rd Thursday),Quitline promotion; cessation events,HED HCS PHN,ALL
+44,November,Native American Heritage Month,Tribal health partnership; cultural events,CES CHW PHN,NAT
+45,December,World AIDS Day (Dec 1),HIV testing; treatment awareness; stigma reduction,DIS PHN CHW HCS,BLK LGBT PWUD
+46,December,Holiday Season,Food drives; winter resource connections; isolation outreach,CHW CES NUT,HML OAD LIW
+47,December,Flu Season Peak,Flu vaccine push; respiratory illness education,PHN SHC HCS,OAD CHD
+48,December,Year-End Reporting,Annual reports; grant closeouts; data summaries,DAT PMG QIC HDO,N/A
+49,Year-Round,SDOH Screening,Continuous screening at all encounters,CHW PHN ALL,ALL
+50,Year-Round,Community Advisory Board,Monthly meetings; community engagement,CES HDO,ALL
+51,Year-Round,Quality Improvement,Quarterly PDSA cycles; performance monitoring,QIC PMG DAT,N/A
+52,Year-Round,Workforce Development,Training; CE; pipeline programs; retention,HDO PMG HED,N/A
