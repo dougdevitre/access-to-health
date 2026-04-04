@@ -14,11 +14,11 @@
     "roi": "npx ts-node tools/roi-calculator.ts",
     "campaign": "npx ts-node tools/campaign-generator.ts",
     "apha": "node tools/apha-fetcher.js",
-    "lint:md": "markdownlint '**/*.md' --ignore node_modules",
-    "lint:links": "markdown-link-check README.md NAVIGATION.md SKILL.md",
+    "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore site",
+    "lint:links": "ts-node tools/validate-links.ts",
     "test": "jest",
     "test:ci": "jest --ci --coverage",
-    "check": "npm run build && npm run lint:md && npm test"
+    "check": "npm run build && npm run lint:md && npm run lint:links && npm test"
   },
   "devDependencies": {
     "typescript": "^5.4.0",
