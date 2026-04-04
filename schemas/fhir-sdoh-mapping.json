@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FHIR R4 SDOH Resource Mapping",
+  "description": "Maps Access to Health SDOH domains to HL7 FHIR R4 resources, Gravity Project value sets, and standard code systems.",
+  "version": "1.0.0",
+  "reference": "http://hl7.org/fhir/us/sdoh-clinicalcare/",
+  "domains": {
+    "housing": {
+      "display": "Housing Instability",
+      "screening_loinc": "71802-3",
+      "condition_icd10": ["Z59.0", "Z59.1", "Z59.81"],
+      "condition_snomed": "32911000",
+      "gravity_code": "housing-instability",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      },
+      "service_snomed": ["710925007"],
+      "z_code_descriptions": {
+        "Z59.0": "Homelessness",
+        "Z59.1": "Inadequate housing",
+        "Z59.81": "Housing instability"
+      }
+    },
+    "food": {
+      "display": "Food Insecurity",
+      "screening_loinc": "88122-7",
+      "condition_icd10": ["Z59.41", "Z59.48"],
+      "condition_snomed": "733423003",
+      "gravity_code": "food-insecurity",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      },
+      "service_snomed": ["467771000124109"],
+      "z_code_descriptions": {
+        "Z59.41": "Food insecurity",
+        "Z59.48": "Other specified lack of adequate food"
+      }
+    },
+    "income": {
+      "display": "Financial Strain",
+      "screening_loinc": "76513-1",
+      "condition_icd10": ["Z59.5", "Z59.6", "Z59.7"],
+      "condition_snomed": "454061000124102",
+      "gravity_code": "financial-strain",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      },
+      "service_snomed": ["467681000124105"],
+      "z_code_descriptions": {
+        "Z59.5": "Extreme poverty",
+        "Z59.6": "Low income",
+        "Z59.7": "Insufficient social insurance and welfare support"
+      }
+    },
+    "transportation": {
+      "display": "Transportation Insecurity",
+      "screening_loinc": "93030-5",
+      "condition_icd10": ["Z59.82"],
+      "condition_snomed": "551781000124108",
+      "gravity_code": "transportation-insecurity",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      },
+      "service_snomed": ["467831000124104"],
+      "z_code_descriptions": {
+        "Z59.82": "Transportation insecurity"
+      }
+    },
+    "education": {
+      "display": "Education Access",
+      "screening_loinc": "82589-3",
+      "condition_icd10": ["Z55.0", "Z55.8", "Z55.9"],
+      "condition_snomed": "105421008",
+      "gravity_code": "education-access",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      },
+      "z_code_descriptions": {
+        "Z55.0": "Illiteracy and low-level literacy",
+        "Z55.8": "Other problems related to education and literacy",
+        "Z55.9": "Problems related to education and literacy, unspecified"
+      }
+    },
+    "safety": {
+      "display": "Interpersonal Safety",
+      "screening_loinc": "76499-3",
+      "condition_icd10": ["Z63.0", "T74", "T76"],
+      "condition_snomed": "706893006",
+      "gravity_code": "intimate-partner-violence",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      },
+      "z_code_descriptions": {
+        "Z63.0": "Problems in relationship with spouse or partner"
+      },
+      "safety_note": "Screen in private. Never screen with partner present. Safety planning before referral."
+    },
+    "healthcare": {
+      "display": "Healthcare Access",
+      "screening_loinc": "93031-3",
+      "condition_icd10": ["Z59.86", "Z59.87"],
+      "condition_snomed": "442096005",
+      "gravity_code": "health-insurance-coverage-status",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      }
+    },
+    "utilities": {
+      "display": "Utility Insecurity",
+      "screening_loinc": "93033-9",
+      "condition_icd10": ["Z59.89"],
+      "gravity_code": "utility-insecurity",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      }
+    },
+    "childcare": {
+      "display": "Childcare Access",
+      "screening_loinc": "93034-7",
+      "condition_icd10": ["Z59.89"],
+      "gravity_code": "childcare-access",
+      "fhir_resources": {
+        "screening": "QuestionnaireResponse",
+        "condition": "Condition",
+        "goal": "Goal",
+        "referral": "ServiceRequest",
+        "tracking": "Task"
+      }
+    }
+  },
+  "screening_instruments": {
+    "prapare": {
+      "display": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences",
+      "loinc_panel": "93025-5",
+      "items": 21,
+      "developer": "National Association of Community Health Centers (NACHC)"
+    },
+    "ahc": {
+      "display": "Accountable Health Communities Health-Related Social Needs Screening Tool",
+      "loinc_panel": "96777-8",
+      "items": 10,
+      "developer": "Centers for Medicare & Medicaid Services (CMS)"
+    }
+  },
+  "consent_resource": {
+    "resourceType": "Consent",
+    "scope": "patient-privacy",
+    "category_loinc": "59284-0",
+    "note": "42 CFR Part 2 requires specific written consent for substance use data. Standard HIPAA consent is not sufficient."
+  },
+  "implementation_notes": {
+    "gravity_project": "Use Gravity Project IG (http://hl7.org/fhir/us/sdoh-clinicalcare/) for all SDOH FHIR implementations",
+    "us_core": "Base on US Core profiles (http://hl7.org/fhir/us/core/) for patient demographics",
+    "bulk_fhir": "Use Bulk FHIR (http://hl7.org/fhir/uv/bulkdata/) for population-level data extraction",
+    "smart_on_fhir": "Use SMART on FHIR (http://hl7.org/fhir/smart-app-launch/) for EHR-embedded applications"
+  }
+}

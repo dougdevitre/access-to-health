@@ -10,11 +10,13 @@ Part of the [CoTrackPro "Access To" Initiative](https://github.com/CoTrackPro) �
 
 A complete operating system for public health — not just a reference library. Routes professionals by role, loads population-specific guidance, executes workflows via slash commands, and generates artifacts from screening results to board presentations.
 
-**20 roles. 25 populations (10 with deep dives). 50 eval cases. 25 slash commands with full implementation. 10 MCP tools. 60+ reporting and communication artifacts. Bilingual Spanish layer. 42 AI prompts. 10 SOPs. 8 cross-role workflows with decision trees. 52-week engagement calendar.**
+**20 roles. 25 populations (10 with deep dives). 50 eval cases. 25 slash commands with full implementation. 10 MCP tools. 60+ reporting and communication artifacts. Bilingual Spanish layer. 42 AI prompts. 10 SOPs. 8 cross-role workflows with decision trees. 52-week engagement calendar. Cross-sector integration guides for developers, city planners, accountants, government, and technology companies. FHIR R4 / Gravity Project data standards. ROI calculator with evidence-based intervention profiles.**
 
 Missouri reference implementation. Nationally applicable.
 
 ## Who It's For
+
+### Public Health Professionals
 
 | Role | Entry Point |
 |---|---|
@@ -30,6 +32,17 @@ Missouri reference implementation. Nationally applicable.
 | **Data Analyst** | `roles/remaining-roles.md` → Dashboards, data quality, reporting, analytics |
 | **Policy Advocate** | `roles/remaining-roles.md` → Legislative tracking, HIA, coalitions, HiAP |
 | **All 20 roles** | `roles/ROLE-REGISTRY.md` → Full index with pod structure and routing |
+
+### Cross-Sector Partners
+
+| Audience | Entry Point |
+|---|---|
+| **Developers / Engineers** | `integration/developer-guide.md` → FHIR, APIs, data standards, MCP tools, compliance |
+| **City Planners** | `integration/city-planning-health.md` → HIA, zoning overlays, transportation, housing, parks |
+| **Accountants / CFOs** | `integration/fiscal-operations.md` → ROI, cost-benefit, grant finance, audit, Medicaid billing |
+| **Government / Elected Officials** | `integration/government-toolkit.md` → Legislation, constituent comms, intergovernmental, HiAP |
+| **Technology Companies** | `integration/health-tech-vendor-guide.md` → Procurement, compliance, interoperability, partnerships |
+| **Data Engineers** | `integration/cross-sector-data-standards.md` → FHIR R4, Gravity Project, open data APIs, de-identification |
 
 ## How It Works
 
@@ -225,11 +238,19 @@ access-to-health/                        46 files │ ~80,000 words
 ├── tools/                               DEVELOPER
 │   ├── sdoh-score.ts                 ✅ TypeScript SDOH risk scoring
 │   ├── campaign-generator.ts         ✅ AI campaign engine
+│   ├── roi-calculator.ts             ✅ Public health ROI calculator
 │   └── apha-fetcher.js               ✅ Node.js APHA reference lookup
+├── integration/                         CROSS-SECTOR
+│   ├── developer-guide.md            ✅ FHIR, APIs, architecture, compliance
+│   ├── city-planning-health.md       ✅ HIA, zoning, transportation, housing, parks
+│   ├── fiscal-operations.md          ✅ ROI, CBA, budgeting, audit, Medicaid billing
+│   ├── government-toolkit.md         ✅ Legislation, constituent comms, HiAP
+│   ├── health-tech-vendor-guide.md   ✅ Procurement, compliance, interoperability
+│   └── cross-sector-data-standards.md ✅ FHIR R4, Gravity Project, open data, de-ID
 └── assets/                              REFERENCE
-    ├── ai-prompt-library.md          📋 42 production prompts
-    ├── data-reference.md             📋 Key statistics + MO data
-    └── engagement-calendar.csv       📋 52-week calendar
+    ├── ai-prompt-library.md          ✅ 42 production prompts
+    ├── data-reference.md             ✅ Key statistics + MO data
+    └── engagement-calendar.csv       ✅ 52-week calendar
 ```
 
 ## The "Access To" Family
