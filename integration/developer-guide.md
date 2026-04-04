@@ -18,30 +18,17 @@
 
 ## Architecture Overview
 
-```
-┌─────────────────────────────────────────────────┐
-│                  USER LAYER                      │
-│  Community members, CHWs, clinicians, planners   │
-└──────────────────────┬──────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────┐
-│              APPLICATION LAYER                    │
-│  Screening tools, resource directories,           │
-│  care coordination, reporting dashboards          │
-└──────────────────────┬──────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────┐
-│              INTEGRATION LAYER                    │
-│  HL7 FHIR R4, SDOH data exchange, MCP tools,    │
-│  Gravity Project standards, API gateway           │
-└──────────────────────┬──────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────┐
-│                DATA LAYER                         │
-│  SDOH screening data, referral tracking,          │
-│  population health, community resources           │
-│  Schema: schemas/sdoh-data-model.json             │
-└─────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    U[User Layer<br/>Community members, CHWs, clinicians, planners]
+    U --> A[Application Layer<br/>Screening tools, resource directories,<br/>care coordination, dashboards]
+    A --> I[Integration Layer<br/>HL7 FHIR R4, Gravity Project,<br/>MCP tools, API gateway]
+    I --> D[Data Layer<br/>SDOH screening, referral tracking,<br/>population health, community resources]
+
+    I -.->|FHIR R4| EHR[EHR Systems<br/>Epic, Cerner, Athena]
+    I -.->|HSDS| RD[Resource Directories<br/>211, Findhelp]
+    I -.->|eCR| SRV[Surveillance<br/>State EpiTrax, CDC]
+    I -.->|ADT| HIE[Health Information<br/>Exchange]
 ```
 
 ---
@@ -168,39 +155,39 @@ Response:
 
 ### Pattern 3: Population Health Dashboard
 
-```
-Data pipeline:
-
-CDC PLACES API ──┐
-BRFSS data ────��─┤
-Vital statistics ─┤──► ETL ──► Data Warehouse ──► Dashboard
-Census ACS ──────┤              │                  (Tableau/
-Program data ────┘              │                   Power BI/
-                                ▼                   R Shiny)
-                          De-identification
-                          (HIPAA Safe Harbor)
-                                │
-                                ▼
-                          Public dashboard
-                          (WCAG 2.1 AA accessible)
+```mermaid
+flowchart LR
+    subgraph Sources
+        A1[CDC PLACES API]
+        A2[BRFSS]
+        A3[Vital Statistics]
+        A4[Census ACS]
+        A5[Program Data]
+    end
+    A1 & A2 & A3 & A4 & A5 --> ETL[ETL Pipeline]
+    ETL --> DW[Data Warehouse]
+    DW --> DEID[De-Identification<br/>HIPAA Safe Harbor]
+    DW --> INT[Internal Dashboard<br/>Program + Leadership]
+    DEID --> PUB[Public Dashboard<br/>WCAG 2.1 AA]
 ```
 
 **Equity requirement**: Every visualization must support disaggregation by race, ethnicity, income, and geography. This is not optional — it's Guardrail #3.
 
 ### Pattern 4: Closed-Loop Referral System
 
-```
-Screening ──► Risk Score ──► Resource Match ──► Referral Sent
-                                                     │
-                                                     ▼
-                                              Receiving Org
-                                              Accepts/Declines
-                                                     │
-                                                     ▼
-                                              Service Delivered
-                                                     │
-                                                     ▼
-Follow-up ◄── Outcome Recorded ◄── Status Updated ──┘
+```mermaid
+flowchart TD
+    S[SDOH Screening] --> RS[Risk Score]
+    RS --> RM[Resource Match<br/>Domain × Tier × Geography]
+    RM --> REF[Referral Sent<br/>FHIR ServiceRequest]
+    REF --> RO{Receiving Org}
+    RO -->|Accepts| SD[Service Delivered]
+    RO -->|Declines| ALT[Find Alternative Resource]
+    ALT --> REF
+    SD --> SU[Status Updated<br/>FHIR Task]
+    SU --> OR[Outcome Recorded<br/>Need Met / Not Met]
+    OR --> FU[Follow-Up Scheduled<br/>Per Risk Level]
+    FU -.->|New needs?| S
 ```
 
 **Closed-loop tracking** means you know whether the referral was completed and the need was met — not just that a phone number was given. This requires:

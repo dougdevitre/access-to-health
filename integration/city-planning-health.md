@@ -44,8 +44,29 @@ Trigger an HIA when a planning decision may affect health:
 
 ### HIA Health Determinant Pathways
 
+```mermaid
+flowchart LR
+    PD[Planning<br/>Decision] --> AQ[Air Quality]
+    PD --> N[Noise]
+    PD --> PA[Physical Activity]
+    PD --> FA[Food Access]
+    PD --> SC[Social Cohesion]
+    PD --> SA[Safety]
+    PD --> HQ[Housing Quality]
+    PD --> DI[Displacement]
+    PD --> EC[Economic Opportunity]
+    PD --> HC[Healthcare Access]
+
+    AQ --> H1[Respiratory, CVD, Cancer]
+    PA --> H2[Obesity, Diabetes, Mental Health]
+    FA --> H3[Nutrition, Chronic Disease]
+    SA --> H4[Injury, Crime, DV]
+    HQ --> H5[Lead, Asthma, Thermal Stress]
+    DI --> H6[Stress, Homelessness]
 ```
-Planning Decision
+
+```
+Planning Decision (text reference)
     │
     ├── Air quality ──────── Respiratory disease, cardiovascular, cancer
     ├── Noise ────────────── Sleep disruption, stress, cardiovascular

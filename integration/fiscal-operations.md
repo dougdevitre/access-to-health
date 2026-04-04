@@ -3,6 +3,24 @@
 > For accountants, CFOs, budget analysts, grant fiscal managers, and auditors
 > Making the financial case for public health — and managing the money responsibly
 
+### Grant Lifecycle Flow
+
+```mermaid
+flowchart LR
+    ID[Identify<br/>Opportunity] --> FIT{Fit<br/>Assessment}
+    FIT -->|Good fit| APP[Application<br/>Development]
+    FIT -->|Poor fit| SKIP[Pass]
+    APP --> SUB[Submit]
+    SUB --> REV{Award<br/>Decision}
+    REV -->|Awarded| KICK[Kickoff +<br/>Budget Setup]
+    REV -->|Not awarded| DEBRIEF[Debrief +<br/>Reapply]
+    KICK --> IMPL[Implementation<br/>+ Monitoring]
+    IMPL --> RPT[Quarterly<br/>Reporting]
+    RPT --> IMPL
+    RPT --> CLOSE[Closeout +<br/>Final Report]
+    CLOSE --> AUD[Audit<br/>Readiness]
+```
+
 ---
 
 ## Public Health ROI — The Financial Case
