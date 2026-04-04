@@ -1,0 +1,33 @@
+name: Cross-Sector Integration
+description: Suggest improvements for developer, planner, government, or tech audience content
+title: "[Integration] "
+labels: ["integration"]
+body:
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Which audience?
+      options:
+        - Developers / Engineers
+        - City Planners
+        - Accountants / CFOs
+        - Government / Elected Officials
+        - Technology Companies
+        - Data Engineers
+        - Other cross-sector
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What would help this audience?
+      description: Describe what's missing, unclear, or could be improved for this audience.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Your context
+      description: What is your role or background? This helps us understand the need.
+    validations:
+      required: false

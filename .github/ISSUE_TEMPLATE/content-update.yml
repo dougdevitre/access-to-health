@@ -1,0 +1,49 @@
+name: Content Update
+description: Suggest a correction, update, or addition to health content
+title: "[Content] "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: What type of update?
+      options:
+        - Factual correction (outdated statistic, wrong citation)
+        - New content (additional population, role, or workflow)
+        - Expansion (deeper detail on existing topic)
+        - Localization (adapt for a different state or jurisdiction)
+        - Translation (new language or correction to existing translation)
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: Which file(s)?
+      description: File path(s) affected (e.g., populations/deep-dives/rural.md)
+      placeholder: "e.g., references/missouri-public-health.md"
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the change
+      description: What should be added, corrected, or updated? Include sources if possible.
+      placeholder: "The infant mortality rate in Missouri has been updated to X per 1,000 (source: DHSS 2025 report)"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Evidence source
+      description: Link to supporting evidence (APHA, CDC, WHO, peer-reviewed, government data)
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: checkboxes
+    id: guardrails
+    attributes:
+      label: Guardrail check
+      options:
+        - label: This update is evidence-based (cites APHA, CDC, WHO, or peer-reviewed sources)
+        - label: This update uses structural framing (not individual blame)
+        - label: This update uses person-first, non-stigmatizing language
