@@ -156,13 +156,13 @@ access-to-health/                        46 files │ ~80,000 words
 │
 ├── roles/                               20 PUBLIC HEALTH ROLES
 │   ├── ROLE-REGISTRY.md              ✅ Index, pods, routing logic
-│   ├── epi.md                        📋 Epidemiologist (deep)
-│   ├── chw.md                        📋 Community Health Worker (deep)
-│   ├── phn.md                        📋 Public Health Nurse (deep)
-│   ├── hdo.md                        📋 Health Director (deep)
-│   ├── priority-roles.md            📋 BHC, EHS, MCH, HCS, PMG, EPC
+│   ├── epi.md                        ✅ Epidemiologist (5 workflows deep dive)
+│   ├── chw.md                        ✅ Community Health Worker (5 workflows deep dive)
+│   ├── phn.md                        ✅ Public Health Nurse (5 workflows deep dive)
+│   ├── hdo.md                        ✅ Health Director (5 workflows deep dive)
+│   ├── priority-roles.md            ✅ BHC, EHS, MCH, HCS, PMG, EPC
 │   ├── remaining-roles.md           ✅ DIS, NUT, SUP, SHC, OHC, CES, QIC, DAT, POL, HED
-│   └── all-roles.md                  📋 Original 18-role reference
+│   └── all-roles.md                  ✅ 20-role quick reference index
 │
 ├── populations/                         25 POPULATIONS + 10 DEEP DIVES
 │   ├── POPULATION-REGISTRY.md        ✅ Master registry (25 populations, routing, SDOH matrix)
@@ -223,9 +223,9 @@ access-to-health/                        46 files │ ~80,000 words
 ├── templates/                           GRANT + POLICY
 │   └── grant-and-policy-templates.md ✅ LOI, narrative, logic model, budget, brief, resolution
 ├── tools/                               DEVELOPER
-│   ├── sdoh-score.ts                 📋 TypeScript SDOH risk scoring
-│   ├── campaign-generator.ts         📋 AI campaign engine
-│   └── apha-fetcher.js               📋 Node.js PDF ingestion
+│   ├── sdoh-score.ts                 ✅ TypeScript SDOH risk scoring
+│   ├── campaign-generator.ts         ✅ AI campaign engine
+│   └── apha-fetcher.js               ✅ Node.js APHA reference lookup
 └── assets/                              REFERENCE
     ├── ai-prompt-library.md          📋 42 production prompts
     ├── data-reference.md             📋 Key statistics + MO data
@@ -242,7 +242,7 @@ access-to-health/                        46 files │ ~80,000 words
 | Services | access-to-services | Complete |
 | Peace | access-to-peace | Complete |
 | Safety | access-to-safety | Complete |
-| **Health** | **access-to-health** | **In progress (35+ files live, 46 target)** |
+| **Health** | **access-to-health** | **Complete (45 files, ~50K words)** |
 
 ## License
 
