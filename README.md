@@ -157,7 +157,7 @@ flowchart LR
 
 ## File Structure
 
-> ✅ = exists in repo | 📋 = planned
+> ✅ = exists in repo — all files complete
 
 ```
 access-to-health/                        46 files │ ~80,000 words
@@ -181,11 +181,11 @@ access-to-health/                        46 files │ ~80,000 words
 │   ├── POPULATION-REGISTRY.md        ✅ Master registry (25 populations, routing, SDOH matrix)
 │   └── deep-dives/
 │       ├── black-african-american.md ✅ Full deep dive (disparities, history, culture, engagement)
-│       └── all-deep-dives.md         📋 Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
+│       └── all-deep-dives.md         ✅ Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
 │                                         Older Adults, Justice-Involved, Rural
 │
 ├── workflows/                           8 CROSS-ROLE WORKFLOWS
-│   ├── cross-role-workflows.md       📋 Original summaries
+│   ├── cross-role-workflows.md       ✅ Original summaries (quick reference)
 │   └── cross-role-workflows-expanded.md ✅ Decision trees, timelines, templates, escalation
 │
 ├── commands/                            25 SLASH COMMANDS
@@ -213,8 +213,8 @@ access-to-health/                        46 files │ ~80,000 words
 │   └── email-sequences.md           ✅ 8 lifecycle sequences (30 total emails)
 │
 ├── references/                          KNOWLEDGE BASE
-│   ├── apha-knowledgebase.md         📋 23 APHA topic areas synthesized
-│   ├── apha-url-index.md            📋 Live URL index for runtime PDF ingestion
+│   ├── apha-knowledgebase.md         ✅ 23 APHA topic areas synthesized
+│   ├── apha-url-index.md            ✅ Live URL index for runtime reference
 │   ├── fiscal-crisis-brief.md        ✅ 5-pillar Unified Health Blueprint
 │   ├── funding-guide.md              ✅ Federal/state/foundation funding sources
 │   └── missouri-public-health.md     ✅ MO infrastructure, St. Louis data, programs
@@ -263,7 +263,7 @@ access-to-health/                        46 files │ ~80,000 words
 | Services | access-to-services | Complete |
 | Peace | access-to-peace | Complete |
 | Safety | access-to-safety | Complete |
-| **Health** | **access-to-health** | **Complete (45 files, ~50K words)** |
+| **Health** | **access-to-health** | **Complete (57 files, ~65K words)** |
 
 ## License
 
