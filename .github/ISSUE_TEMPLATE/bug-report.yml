@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report broken links, formatting issues, tool errors, or CI failures
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Broken link or cross-reference
+        - Formatting issue (Markdown, Mermaid diagram)
+        - Tool error (TypeScript/JavaScript)
+        - CI failure
+        - Schema error (JSON)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: File(s) affected
+      placeholder: "e.g., tools/sdoh-score.ts"
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: false
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can someone reproduce this issue?
+      placeholder: |
+        1. Run `npx ts-node tools/sdoh-score.ts`
+        2. Observe error on line X
+    validations:
+      required: false

@@ -1,5 +1,7 @@
 # Access to Health
 
+[![CI](https://github.com/dougdevitre/access-to-health/actions/workflows/ci.yml/badge.svg)](https://github.com/dougdevitre/access-to-health/actions/workflows/ci.yml)
+
 **Comprehensive AI Operating System for Public Health Professionals**
 
 Part of the [CoTrackPro "Access To" Initiative](https://github.com/CoTrackPro) — open-source civic resource systems for justice, education, housing, services, peace, safety, and health.
