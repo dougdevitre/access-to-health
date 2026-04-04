@@ -10,11 +10,13 @@ Part of the [CoTrackPro "Access To" Initiative](https://github.com/CoTrackPro) �
 
 A complete operating system for public health — not just a reference library. Routes professionals by role, loads population-specific guidance, executes workflows via slash commands, and generates artifacts from screening results to board presentations.
 
-**20 roles. 25 populations (10 with deep dives). 50 eval cases. 25 slash commands with full implementation. 10 MCP tools. 60+ reporting and communication artifacts. Bilingual Spanish layer. 42 AI prompts. 10 SOPs. 8 cross-role workflows with decision trees. 52-week engagement calendar.**
+**20 roles. 25 populations (10 with deep dives). 50 eval cases. 25 slash commands with full implementation. 10 MCP tools. 60+ reporting and communication artifacts. Bilingual Spanish layer. 42 AI prompts. 10 SOPs. 8 cross-role workflows with decision trees. 52-week engagement calendar. Cross-sector integration guides for developers, city planners, accountants, government, and technology companies. FHIR R4 / Gravity Project data standards. ROI calculator with evidence-based intervention profiles.**
 
 Missouri reference implementation. Nationally applicable.
 
 ## Who It's For
+
+### Public Health Professionals
 
 | Role | Entry Point |
 |---|---|
@@ -30,6 +32,17 @@ Missouri reference implementation. Nationally applicable.
 | **Data Analyst** | `roles/remaining-roles.md` → Dashboards, data quality, reporting, analytics |
 | **Policy Advocate** | `roles/remaining-roles.md` → Legislative tracking, HIA, coalitions, HiAP |
 | **All 20 roles** | `roles/ROLE-REGISTRY.md` → Full index with pod structure and routing |
+
+### Cross-Sector Partners
+
+| Audience | Entry Point |
+|---|---|
+| **Developers / Engineers** | `integration/developer-guide.md` → FHIR, APIs, data standards, MCP tools, compliance |
+| **City Planners** | `integration/city-planning-health.md` → HIA, zoning overlays, transportation, housing, parks |
+| **Accountants / CFOs** | `integration/fiscal-operations.md` → ROI, cost-benefit, grant finance, audit, Medicaid billing |
+| **Government / Elected Officials** | `integration/government-toolkit.md` → Legislation, constituent comms, intergovernmental, HiAP |
+| **Technology Companies** | `integration/health-tech-vendor-guide.md` → Procurement, compliance, interoperability, partnerships |
+| **Data Engineers** | `integration/cross-sector-data-standards.md` → FHIR R4, Gravity Project, open data APIs, de-identification |
 
 ## How It Works
 
@@ -144,7 +157,7 @@ flowchart LR
 
 ## File Structure
 
-> ✅ = exists in repo | 📋 = planned
+> ✅ = exists in repo — all files complete
 
 ```
 access-to-health/                        46 files │ ~80,000 words
@@ -156,23 +169,23 @@ access-to-health/                        46 files │ ~80,000 words
 │
 ├── roles/                               20 PUBLIC HEALTH ROLES
 │   ├── ROLE-REGISTRY.md              ✅ Index, pods, routing logic
-│   ├── epi.md                        📋 Epidemiologist (deep)
-│   ├── chw.md                        📋 Community Health Worker (deep)
-│   ├── phn.md                        📋 Public Health Nurse (deep)
-│   ├── hdo.md                        📋 Health Director (deep)
-│   ├── priority-roles.md            📋 BHC, EHS, MCH, HCS, PMG, EPC
+│   ├── epi.md                        ✅ Epidemiologist (5 workflows deep dive)
+│   ├── chw.md                        ✅ Community Health Worker (5 workflows deep dive)
+│   ├── phn.md                        ✅ Public Health Nurse (5 workflows deep dive)
+│   ├── hdo.md                        ✅ Health Director (5 workflows deep dive)
+│   ├── priority-roles.md            ✅ BHC, EHS, MCH, HCS, PMG, EPC
 │   ├── remaining-roles.md           ✅ DIS, NUT, SUP, SHC, OHC, CES, QIC, DAT, POL, HED
-│   └── all-roles.md                  📋 Original 18-role reference
+│   └── all-roles.md                  ✅ 20-role quick reference index
 │
 ├── populations/                         25 POPULATIONS + 10 DEEP DIVES
 │   ├── POPULATION-REGISTRY.md        ✅ Master registry (25 populations, routing, SDOH matrix)
 │   └── deep-dives/
 │       ├── black-african-american.md ✅ Full deep dive (disparities, history, culture, engagement)
-│       └── all-deep-dives.md         📋 Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
+│       └── all-deep-dives.md         ✅ Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
 │                                         Older Adults, Justice-Involved, Rural
 │
 ├── workflows/                           8 CROSS-ROLE WORKFLOWS
-│   ├── cross-role-workflows.md       📋 Original summaries
+│   ├── cross-role-workflows.md       ✅ Original summaries (quick reference)
 │   └── cross-role-workflows-expanded.md ✅ Decision trees, timelines, templates, escalation
 │
 ├── commands/                            25 SLASH COMMANDS
@@ -200,8 +213,8 @@ access-to-health/                        46 files │ ~80,000 words
 │   └── email-sequences.md           ✅ 8 lifecycle sequences (30 total emails)
 │
 ├── references/                          KNOWLEDGE BASE
-│   ├── apha-knowledgebase.md         📋 23 APHA topic areas synthesized
-│   ├── apha-url-index.md            📋 Live URL index for runtime PDF ingestion
+│   ├── apha-knowledgebase.md         ✅ 23 APHA topic areas synthesized
+│   ├── apha-url-index.md            ✅ Live URL index for runtime reference
 │   ├── fiscal-crisis-brief.md        ✅ 5-pillar Unified Health Blueprint
 │   ├── funding-guide.md              ✅ Federal/state/foundation funding sources
 │   └── missouri-public-health.md     ✅ MO infrastructure, St. Louis data, programs
@@ -223,13 +236,21 @@ access-to-health/                        46 files │ ~80,000 words
 ├── templates/                           GRANT + POLICY
 │   └── grant-and-policy-templates.md ✅ LOI, narrative, logic model, budget, brief, resolution
 ├── tools/                               DEVELOPER
-│   ├── sdoh-score.ts                 📋 TypeScript SDOH risk scoring
-│   ├── campaign-generator.ts         📋 AI campaign engine
-│   └── apha-fetcher.js               📋 Node.js PDF ingestion
+│   ├── sdoh-score.ts                 ✅ TypeScript SDOH risk scoring
+│   ├── campaign-generator.ts         ✅ AI campaign engine
+│   ├── roi-calculator.ts             ✅ Public health ROI calculator
+│   └── apha-fetcher.js               ✅ Node.js APHA reference lookup
+├── integration/                         CROSS-SECTOR
+│   ├── developer-guide.md            ✅ FHIR, APIs, architecture, compliance
+│   ├── city-planning-health.md       ✅ HIA, zoning, transportation, housing, parks
+│   ├── fiscal-operations.md          ✅ ROI, CBA, budgeting, audit, Medicaid billing
+│   ├── government-toolkit.md         ✅ Legislation, constituent comms, HiAP
+│   ├── health-tech-vendor-guide.md   ✅ Procurement, compliance, interoperability
+│   └── cross-sector-data-standards.md ✅ FHIR R4, Gravity Project, open data, de-ID
 └── assets/                              REFERENCE
-    ├── ai-prompt-library.md          📋 42 production prompts
-    ├── data-reference.md             📋 Key statistics + MO data
-    └── engagement-calendar.csv       📋 52-week calendar
+    ├── ai-prompt-library.md          ✅ 42 production prompts
+    ├── data-reference.md             ✅ Key statistics + MO data
+    └── engagement-calendar.csv       ✅ 52-week calendar
 ```
 
 ## The "Access To" Family
@@ -242,7 +263,7 @@ access-to-health/                        46 files │ ~80,000 words
 | Services | access-to-services | Complete |
 | Peace | access-to-peace | Complete |
 | Safety | access-to-safety | Complete |
-| **Health** | **access-to-health** | **In progress (35+ files live, 46 target)** |
+| **Health** | **access-to-health** | **Complete (57 files, ~65K words)** |
 
 ## License
 
