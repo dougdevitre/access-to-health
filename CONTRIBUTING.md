@@ -103,4 +103,4 @@ Categories: `content`, `fix`, `tools`, `schema`, `docs`, `integration`
 
 ## Questions?
 
-Doug Devitre — [cotrackpro.com](https://cotrackpro.com) — dougdevitre@gmail.com
+Doug Devitre — [cotrackpro.com](https://cotrackpro.com) — <dougdevitre@gmail.com>

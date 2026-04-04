@@ -5,7 +5,7 @@
 
 ---
 
-### Health Profile
+## Health Profile
 - **Life expectancy**: 12+ years shorter than general population. Average age of death ~50
 - **Mental illness**: 30-40% — often untreated, compounding homelessness
 - **Substance use disorders**: 30-40% — often intertwined with trauma and mental illness
@@ -15,7 +15,7 @@
 - **Injuries**: Falls, assault, frostbite, heat illness, pedestrian injury
 - **Mortality**: Overdose, suicide, homicide, exposure, and treatable medical conditions
 
-### Root Causes — Systems, Not Choices
+## Root Causes — Systems, Not Choices
 1. **Housing cost**: Wages haven't kept pace with housing costs. Median renter can't afford a 2BR in any US state at minimum wage
 2. **Eviction**: A single eviction creates a cascade — job loss, school disruption, shelter entry, chronic homelessness
 3. **Mental illness/SUD**: Deinstitutionalization without community investment. Treatment inaccessible
@@ -24,7 +24,7 @@
 6. **Incarceration**: Housing discrimination against people with criminal records
 7. **Medical debt**: Leading cause of bankruptcy
 
-### Engagement Strategies
+## Engagement Strategies
 - **Meet where they are**: Street outreach, shelters, day centers, encampments, libraries, syringe programs
 - **Low barrier**: No ID required. No sobriety required. No appointments required
 - **Housing First**: The evidence says: house people first, then address health. Not the reverse

@@ -5,7 +5,7 @@
 
 ---
 
-### Health Profile
+## Health Profile
 - **Diabetes**: 1.7x higher prevalence than white adults. Higher rates of uncontrolled diabetes due to access barriers
 - **Cervical cancer**: Higher incidence due to HPV screening gaps
 - **Occupational injuries**: Overrepresented in agriculture, construction, and food processing — high-hazard industries
@@ -14,7 +14,7 @@
 - **Uninsured rate**: Highest of any racial/ethnic group (~18%). Immigration status fear suppresses enrollment
 - **Mental health**: Comparable prevalence but significantly lower treatment rates. "Nervios" and "susto" may be presenting complaints for depression/anxiety/PTSD
 
-### Root Causes — Structural, Not Individual
+## Root Causes — Structural, Not Individual
 1. **Immigration enforcement fear**: Suppresses healthcare utilization, benefit enrollment, and reporting of abuse or workplace violations — even among citizens and legal residents
 2. **Language barriers**: 25 million Americans have limited English proficiency. Health information is often English-only
 3. **Occupational exploitation**: Dangerous jobs, low wages, no benefits, retaliation for complaints
@@ -22,7 +22,7 @@
 5. **Housing instability**: Overcrowding, substandard housing, fear of reporting violations
 6. **Political disenfranchisement**: Non-citizen residents cannot vote, reducing political power to change health-harming policies
 
-### Cultural Considerations
+## Cultural Considerations
 - **Familismo**: Family is central. Include family in health decisions when the client invites it. Decisions are often collective
 - **Personalismo**: Warm, personal relationships > institutional efficiency. Take time for greeting and rapport
 - **Respeto**: Deep respect for elders and authority. Use formal address (usted) until invited otherwise
@@ -31,7 +31,7 @@
 - **Susto/Nervios**: Folk illness concepts that may present as anxiety, depression, PTSD. Don't dismiss — integrate with medical assessment
 - See `bilingual/spanish-layer.md` for screening scripts, cultural concepts, and safe spaces protocol
 
-### Engagement Strategies
+## Engagement Strategies
 - **Promotoras de salud**: Community health workers from the community — trusted, culturally connected, bilingual
 - **Catholic parishes**: Central institution in many Latino communities
 - **Tiendas, laundromats, soccer fields**: Where the community gathers

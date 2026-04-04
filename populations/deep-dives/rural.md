@@ -5,7 +5,7 @@
 
 ---
 
-### Health Profile
+## Health Profile
 - **Provider shortage**: 65% of Health Professional Shortage Areas are rural. Fewer specialists, longer waits
 - **Hospital closures**: 130+ rural hospitals closed since 2010. More at risk
 - **Higher mortality**: Rural residents have higher death rates for heart disease, cancer, unintentional injury, stroke, and COPD
@@ -14,7 +14,7 @@
 - **Obesity/diabetes**: Higher rates — food deserts, fewer recreational facilities, occupational patterns
 - **Agricultural health**: Pesticide exposure, injuries, respiratory disease, heat illness, mental health (farm stress)
 
-### Access Barriers
+## Access Barriers
 1. **Distance**: Average rural resident lives 10+ miles from a hospital. Specialty care may be 60+ miles
 2. **Transportation**: Limited public transit. Car dependence. Cost of travel
 3. **Broadband**: 25% of rural residents lack broadband. Limits telehealth, health information, appointment scheduling
@@ -22,7 +22,7 @@
 5. **Stigma**: Small communities — "everyone knows everyone." Seeking mental health or SUD treatment = public knowledge
 6. **Economics**: Lower wages, fewer benefits, agricultural income volatility
 
-### Engagement
+## Engagement
 - **Telehealth**: Expand dramatically. Audio-only for those without broadband/smartphones
 - **Mobile clinics**: Bring services to the community (screening, immunization, dental)
 - **Churches**: Central institution in rural life. Health ministry partnerships

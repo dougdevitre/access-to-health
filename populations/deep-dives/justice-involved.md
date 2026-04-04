@@ -5,7 +5,7 @@
 
 ---
 
-### Health Profile
+## Health Profile
 - **Mental illness**: 50%+ — often untreated during and after incarceration
 - **Substance use disorders**: 65%+ — treatment access extremely limited in custody
 - **Chronic disease**: Hypertension, diabetes, asthma, hepatitis — poorly managed during incarceration
@@ -14,7 +14,7 @@
 - **Traumatic brain injury**: 25-87% depending on population — often undiagnosed
 - **Overdose**: Risk of death from overdose is **129x higher** in the 2 weeks after release from incarceration
 
-### Critical Reentry Needs (First 72 Hours)
+## Critical Reentry Needs (First 72 Hours)
 1. **Medications**: 30-day supply at release (many facilities release with 0-3 days)
 2. **Medicaid enrollment**: Suspend during incarceration, reactivate at release (not terminate)
 3. **SUD treatment**: MAT continuity — do NOT stop buprenorphine or methadone at release
@@ -23,7 +23,7 @@
 6. **ID**: Help obtaining state ID, Social Security card, birth certificate
 7. **Naloxone**: Provide at release with training — overdose risk peaks immediately
 
-### Engagement
+## Engagement
 - **Reentry programs**: Workforce development, case management, mentoring
 - **Peer specialists with lived experience**: People who have been incarcerated themselves
 - **Legal aid**: Expungement, driver's license reinstatement, employment rights

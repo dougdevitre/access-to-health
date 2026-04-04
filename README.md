@@ -279,4 +279,4 @@ MIT — Use freely. Attribution appreciated.
 
 ## Contact
 
-Doug Devitre — [cotrackpro.com](https://cotrackpro.com) — dougdevitre@gmail.com
+Doug Devitre — [cotrackpro.com](https://cotrackpro.com) — <dougdevitre@gmail.com>

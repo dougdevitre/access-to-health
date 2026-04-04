@@ -5,7 +5,7 @@
 
 ---
 
-### Health Profile
+## Health Profile
 - **Mental health**: 2-3x higher rates of depression and anxiety. 4x suicide attempt rate in youth
 - **HIV**: MSM account for ~70% of new HIV diagnoses. Transgender women at very high risk
 - **Substance use**: Higher rates of tobacco, alcohol, and drug use — driven by minority stress
@@ -14,7 +14,7 @@
 - **Provider bias**: 8% of LGB and 29% of transgender people report being refused care
 - **Youth**: Family rejection is the #1 predictor of negative health outcomes for LGBTQ+ youth
 
-### Clinical Considerations
+## Clinical Considerations
 - **Intake forms**: Include sexual orientation and gender identity (SOGI) fields. Ask preferred name and pronouns
 - **Chosen name**: Use chosen name in all interactions. Legal name only for insurance/billing when required
 - **Affirming language**: "Partner" not "husband/wife" until told. "Assigned male/female at birth" not "biological"
@@ -22,7 +22,7 @@
 - **PrEP**: Pre-exposure prophylaxis for HIV prevention. Discuss with all MSM and transgender patients at risk
 - **Do NOT assume**: Sexual orientation and gender identity are separate from each other and from behavior
 
-### Engagement
+## Engagement
 - **LGBTQ+ community centers**: Primary trusted institutions
 - **Pride organizations**: Events, social networks, community building
 - **GSAs (Gender-Sexuality Alliances)**: In schools — critical for youth

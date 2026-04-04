@@ -5,7 +5,7 @@
 
 ---
 
-### Health Profile
+## Health Profile
 - **Overdose**: Leading cause of death ages 18-45. Fentanyl dominates the illicit supply
 - **HIV/HCV**: Injection drug use remains a major transmission route. 70-80% of PWID have HCV
 - **Endocarditis**: Injection-related bacterial heart valve infection — often fatal without surgery
@@ -14,7 +14,7 @@
 - **Incarceration**: Drug criminalization creates cycling through jails. Overdose risk skyrockets at release
 - **Stigma**: The single largest barrier to care. Stigma kills more than drugs do
 
-### Harm Reduction Framework
+## Harm Reduction Framework
 **Harm reduction is evidence-based healthcare, not enabling.** It saves lives.
 
 | Intervention | Evidence |
@@ -27,14 +27,14 @@
 | **Drug checking** | Identify adulterants (fentanyl, xylazine, nitazenes). Inform harm reduction response |
 | **Wound care** | Basic wound care at syringe programs prevents hospital admissions |
 
-### Language Rules
+## Language Rules
 - **Say**: "Person who uses drugs" — NOT "addict," "junkie," "abuser," "substance abuser"
 - **Say**: "Positive drug test" — NOT "dirty"
 - **Say**: "Use" or "misuse" — NOT "abuse"
 - **Say**: "Medication for opioid use disorder" — NOT "replacement" or "substitution"
 - **Say**: "Has a substance use disorder" — NOT "is an addict"
 
-### Engagement
+## Engagement
 - Syringe service programs, mobile outreach, peer recovery specialists with lived experience
 - **Never** require abstinence as a condition of receiving healthcare or social services
 - **Never** discharge someone from care for positive drug tests
