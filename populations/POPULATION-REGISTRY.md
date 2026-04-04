@@ -19,15 +19,15 @@
 | Code | Population | Key Disparities | Deep Dive |
 |------|-----------|----------------|-----------|
 | BLK | Black / African American | CVD, maternal mortality, infant mortality, cancer, HIV | ✅ `populations/deep-dives/black-african-american.md` |
-| HIS | Hispanic / Latino | Diabetes, access barriers, occupational health, immigration fear | 📋 Planned |
-| PRG | Pregnant and Postpartum | Maternal mortality, preterm birth, depression, SUD in pregnancy | 📋 Planned |
-| HML | People Experiencing Homelessness | Exposure, mental illness, SUD, infectious disease, injuries | 📋 Planned |
-| PWUD | People Who Use Drugs | Overdose, HIV/HCV, wounds, stigma, incarceration | 📋 Planned |
-| IMM | Immigrant and Refugee | Infectious disease, trauma/PTSD, access barriers, language | 📋 Planned |
-| LGBT | LGBTQ+ | Mental health, HIV, substance use, discrimination, provider bias | 📋 Planned |
-| OAD | Older Adults (65+) | Falls, isolation, polypharmacy, dementia, elder abuse | 📋 Planned |
-| JUS | Justice-Involved / Reentry | Mental illness, SUD, chronic disease, reentry barriers | 📋 Planned |
-| RUR | Rural Communities | Provider shortage, distance, opioids, agriculture, broadband | 📋 Planned |
+| HIS | Hispanic / Latino | Diabetes, access barriers, occupational health, immigration fear | ✅ `populations/deep-dives/hispanic-latino.md` |
+| PRG | Pregnant and Postpartum | Maternal mortality, preterm birth, depression, SUD in pregnancy | ✅ `populations/deep-dives/pregnant-postpartum.md` |
+| HML | People Experiencing Homelessness | Exposure, mental illness, SUD, infectious disease, injuries | ✅ `populations/deep-dives/homeless.md` |
+| PWUD | People Who Use Drugs | Overdose, HIV/HCV, wounds, stigma, incarceration | ✅ `populations/deep-dives/people-who-use-drugs.md` |
+| IMM | Immigrant and Refugee | Infectious disease, trauma/PTSD, access barriers, language | ✅ `populations/deep-dives/immigrant-refugee.md` |
+| LGBT | LGBTQ+ | Mental health, HIV, substance use, discrimination, provider bias | ✅ `populations/deep-dives/lgbtq.md` |
+| OAD | Older Adults (65+) | Falls, isolation, polypharmacy, dementia, elder abuse | ✅ `populations/deep-dives/older-adults.md` |
+| JUS | Justice-Involved / Reentry | Mental illness, SUD, chronic disease, reentry barriers | ✅ `populations/deep-dives/justice-involved.md` |
+| RUR | Rural Communities | Provider shortage, distance, opioids, agriculture, broadband | ✅ `populations/deep-dives/rural.md` |
 | CHD | Children and Adolescents | Obesity, ACEs, mental health, immunization, lead | — |
 | VET | Veterans | PTSD, TBI, SUD, suicide, service-connected disability | — |
 | DIS | People with Disabilities | Access barriers, secondary conditions, isolation, abuse | — |

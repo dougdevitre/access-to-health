@@ -1,0 +1,27 @@
+{
+  "name": "access-to-health",
+  "version": "3.2.0",
+  "description": "Comprehensive AI operating system for public health professionals — 20 roles, 25 populations, cross-sector integration for developers, planners, government, and tech",
+  "author": "Doug Devitre <dougdevitre@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dougdevitre/access-to-health"
+  },
+  "scripts": {
+    "build": "tsc",
+    "sdoh-score": "npx ts-node tools/sdoh-score.ts",
+    "roi": "npx ts-node tools/roi-calculator.ts",
+    "campaign": "npx ts-node tools/campaign-generator.ts",
+    "apha": "node tools/apha-fetcher.js",
+    "lint:md": "markdownlint '**/*.md' --ignore node_modules",
+    "lint:links": "markdown-link-check README.md NAVIGATION.md SKILL.md",
+    "test": "npm run build && npm run lint:md"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.0",
+    "markdownlint-cli": "^0.41.0",
+    "markdown-link-check": "^3.12.0"
+  }
+}
