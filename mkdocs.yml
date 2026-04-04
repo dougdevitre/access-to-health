@@ -1,0 +1,153 @@
+site_name: Access to Health
+site_description: Comprehensive AI Operating System for Public Health Professionals
+site_url: https://dougdevitre.github.io/access-to-health/
+repo_url: https://github.com/dougdevitre/access-to-health
+repo_name: dougdevitre/access-to-health
+edit_uri: edit/main/
+
+copyright: >
+  MIT License — Doug Devitre / CoTrackPro
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dougdevitre/access-to-health
+  generator: false
+
+docs_dir: docs
+
+nav:
+  - Home:
+      - Overview: index.md
+      - Navigation Guide: NAVIGATION.md
+      - Audit Report: AUDIT.md
+      - Contributing: CONTRIBUTING.md
+
+  - Roles:
+      - Role Registry: roles/ROLE-REGISTRY.md
+      - Epidemiologist: roles/epi.md
+      - Community Health Worker: roles/chw.md
+      - Public Health Nurse: roles/phn.md
+      - Health Director: roles/hdo.md
+      - Priority Roles (BHC, EHS, MCH, HCS, PMG, EPC): roles/priority-roles.md
+      - Remaining Roles (10): roles/remaining-roles.md
+      - All Roles Reference: roles/all-roles.md
+
+  - Populations:
+      - Population Registry: populations/POPULATION-REGISTRY.md
+      - Deep Dives:
+          - Black / African American: populations/deep-dives/black-african-american.md
+          - Hispanic / Latino: populations/deep-dives/hispanic-latino.md
+          - Pregnant & Postpartum: populations/deep-dives/pregnant-postpartum.md
+          - People Experiencing Homelessness: populations/deep-dives/homeless.md
+          - People Who Use Drugs: populations/deep-dives/people-who-use-drugs.md
+          - Immigrant & Refugee: populations/deep-dives/immigrant-refugee.md
+          - LGBTQ+: populations/deep-dives/lgbtq.md
+          - Older Adults: populations/deep-dives/older-adults.md
+          - Justice-Involved / Reentry: populations/deep-dives/justice-involved.md
+          - Rural Communities: populations/deep-dives/rural.md
+
+  - Workflows:
+      - Quick Reference: workflows/cross-role-workflows.md
+      - Expanded (Decision Trees): workflows/cross-role-workflows-expanded.md
+
+  - Commands:
+      - Command Reference: commands/COMMANDS.md
+      - Full Specifications: commands/COMMAND-SPECS.md
+
+  - Features:
+      - SDOH Screener: features/sdoh-screener.md
+      - Resource Navigator: features/resource-navigator.md
+      - Advocacy Toolkit: features/advocacy-toolkit.md
+      - Education Toolkit: features/education-toolkit.md
+
+  - Communication:
+      - Internal Playbook: communication/internal-playbook.md
+      - External Playbook: communication/external-playbook.md
+      - Campaign Builder: messaging/campaign-builder.md
+      - Social Media Library: messaging/social-media-library.md
+      - Trust Rebuilding: messaging/trust-rebuilding-playbook.md
+      - Email Sequences: messaging/email-sequences.md
+
+  - Artifacts & Templates:
+      - Reporting Templates (60+): artifacts/reporting-templates.md
+      - Role Artifacts (13): artifacts/role-artifacts.md
+      - Grant & Policy Templates: grant-templates/grant-and-policy-templates.md
+
+  - Cross-Sector Integration:
+      - Developer Guide: integration/developer-guide.md
+      - City Planning & Health: integration/city-planning-health.md
+      - Fiscal Operations: integration/fiscal-operations.md
+      - Government Toolkit: integration/government-toolkit.md
+      - Health Tech Vendors: integration/health-tech-vendor-guide.md
+      - Data Standards: integration/cross-sector-data-standards.md
+
+  - References:
+      - APHA Knowledge Base: references/apha-knowledgebase.md
+      - APHA URL Index: references/apha-url-index.md
+      - Missouri Public Health: references/missouri-public-health.md
+      - Funding Guide: references/funding-guide.md
+      - Fiscal Crisis Brief: references/fiscal-crisis-brief.md
+      - Data Reference: assets/data-reference.md
+      - AI Prompt Library: assets/ai-prompt-library.md
+
+  - Operations:
+      - Team SOPs (10): scripts/team-sops.md
+      - Evaluation Suite (50 cases): evals/EVAL-SUITE.md
+      - Bilingual / Spanish: bilingual/spanish-layer.md
+      - MCP Tool Schemas: mcp/MCP-SCHEMA.md
+
+  - AI Skill:
+      - SKILL.md: SKILL.md
