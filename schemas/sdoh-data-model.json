@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SDOH Data Model — HIPAA-Ready",
+  "description": "5-table relational model for Social Determinants of Health screening, referral, and outcome tracking. Designed for HIPAA compliance with built-in de-identification support.",
+  "version": "1.0.0",
+  "tables": {
+    "clients": {
+      "description": "Client demographic and contact information. PHI — full HIPAA protections apply.",
+      "primary_key": "client_id",
+      "fields": {
+        "client_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique client identifier (system-generated, not SSN or MRN)"
+        },
+        "first_name": {
+          "type": "string",
+          "phi": true,
+          "description": "Client first name"
+        },
+        "last_name": {
+          "type": "string",
+          "phi": true,
+          "description": "Client last name"
+        },
+        "date_of_birth": {
+          "type": "string",
+          "format": "date",
+          "phi": true,
+          "description": "Date of birth (YYYY-MM-DD)"
+        },
+        "age": {
+          "type": "integer",
+          "phi": false,
+          "description": "Age in years (derived, safe for aggregate reporting)"
+        },
+        "sex": {
+          "type": "string",
+          "enum": ["female", "male", "intersex", "prefer_not_to_say"],
+          "phi": false
+        },
+        "gender_identity": {
+          "type": "string",
+          "enum": ["woman", "man", "transgender_woman", "transgender_man", "non_binary", "other", "prefer_not_to_say"],
+          "phi": false
+        },
+        "race": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["american_indian_alaska_native", "asian", "black_african_american", "native_hawaiian_pacific_islander", "white", "other", "prefer_not_to_say"]
+          },
+          "description": "Select all that apply (OMB categories)"
+        },
+        "ethnicity": {
+          "type": "string",
+          "enum": ["hispanic_latino", "not_hispanic_latino", "prefer_not_to_say"]
+        },
+        "preferred_language": {
+          "type": "string",
+          "description": "ISO 639-1 language code (e.g., 'en', 'es', 'ar', 'so')"
+        },
+        "zip_code": {
+          "type": "string",
+          "pattern": "^[0-9]{5}$",
+          "phi": true,
+          "description": "5-digit ZIP (PHI if combined with other fields; 3-digit ZIP prefix is safe harbor)"
+        },
+        "county_fips": {
+          "type": "string",
+          "pattern": "^[0-9]{5}$",
+          "phi": false,
+          "description": "5-digit FIPS county code (safe for aggregate reporting)"
+        },
+        "insurance_status": {
+          "type": "string",
+          "enum": ["medicaid", "medicare", "private", "marketplace", "uninsured", "other", "unknown"]
+        },
+        "veteran_status": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+
+    "screenings": {
+      "description": "SDOH screening events. Links client to screening tool, date, and screener.",
+      "primary_key": "screening_id",
+      "foreign_keys": {
+        "client_id": "clients.client_id",
+        "screener_id": "staff.staff_id"
+      },
+      "fields": {
+        "screening_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "client_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "screener_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Staff member who administered the screening"
+        },
+        "screening_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "tool": {
+          "type": "string",
+          "enum": ["prapare", "ahc", "quick_screen"],
+          "description": "Which validated screening tool was used"
+        },
+        "setting": {
+          "type": "string",
+          "enum": ["clinical", "community", "home_visit", "phone", "telehealth", "school", "shelter", "other"]
+        },
+        "total_risk_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 27,
+          "description": "Composite SDOH risk score per scoring algorithm"
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": ["none", "low", "moderate", "high", "critical"]
+        },
+        "domains_flagged": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["housing", "food", "income", "healthcare", "education", "safety", "transportation", "utilities", "childcare"]
+          }
+        },
+        "client_declined": {
+          "type": "boolean",
+          "description": "Client declined to complete screening (record but respect autonomy)"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text clinical notes (PHI — HIPAA applies)"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+
+    "referrals": {
+      "description": "Referrals generated from screening results. Tracks warm handoff and outcome.",
+      "primary_key": "referral_id",
+      "foreign_keys": {
+        "screening_id": "screenings.screening_id",
+        "client_id": "clients.client_id",
+        "referred_by": "staff.staff_id"
+      },
+      "fields": {
+        "referral_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "screening_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "client_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "referred_by": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "referral_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "domain": {
+          "type": "string",
+          "enum": ["housing", "food", "income", "healthcare", "education", "safety", "transportation", "utilities", "childcare"]
+        },
+        "tier": {
+          "type": "string",
+          "enum": ["emergency", "short_term", "long_term"]
+        },
+        "resource_name": {
+          "type": "string",
+          "description": "Name of the resource/organization referred to"
+        },
+        "resource_phone": {
+          "type": "string"
+        },
+        "referral_type": {
+          "type": "string",
+          "enum": ["warm_handoff", "assisted_referral", "information_only"],
+          "description": "warm_handoff = called together; assisted_referral = staff made contact; information_only = provided info"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "connected", "attempted", "declined", "unable", "completed", "lost_to_follow_up"]
+        },
+        "follow_up_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": ["need_met", "need_partially_met", "need_not_met", "pending", "unknown"],
+          "description": "Was the identified need ultimately addressed?"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+
+    "follow_ups": {
+      "description": "Follow-up contacts after referral. Tracks whether client connected and need was met.",
+      "primary_key": "follow_up_id",
+      "foreign_keys": {
+        "referral_id": "referrals.referral_id",
+        "client_id": "clients.client_id",
+        "staff_id": "staff.staff_id"
+      },
+      "fields": {
+        "follow_up_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "referral_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "client_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "staff_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "follow_up_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["phone", "in_person", "home_visit", "text", "telehealth"]
+        },
+        "client_reached": {
+          "type": "boolean"
+        },
+        "referral_status_update": {
+          "type": "string",
+          "enum": ["connected", "attempted", "declined", "unable", "completed", "lost_to_follow_up"]
+        },
+        "new_needs_identified": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["housing", "food", "income", "healthcare", "education", "safety", "transportation", "utilities", "childcare"]
+          }
+        },
+        "next_follow_up_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+
+    "staff": {
+      "description": "Health department staff who administer screenings, make referrals, and conduct follow-ups.",
+      "primary_key": "staff_id",
+      "fields": {
+        "staff_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "role_code": {
+          "type": "string",
+          "enum": ["EPI", "DIS", "DAT", "CHW", "CES", "PHN", "OHC", "BHC", "SUP", "MCH", "NUT", "HED", "SHC", "EHS", "HDO", "POL", "PMG", "QIC", "EPC", "HCS"],
+          "description": "3-letter role code per ROLE-REGISTRY.md"
+        },
+        "pod": {
+          "type": "string",
+          "enum": ["surveillance", "community", "clinical", "behavioral_health", "maternal_child_health", "education", "environment", "policy_leadership", "operations"]
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "active": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+
+  "de_identification_rules": {
+    "description": "HIPAA Safe Harbor de-identification method (45 CFR 164.514(b)(2)). Apply before any public reporting or data sharing.",
+    "remove": [
+      "first_name",
+      "last_name",
+      "date_of_birth",
+      "zip_code (replace with 3-digit prefix; set to 000 if population < 20,000)",
+      "any free-text notes that may contain PHI"
+    ],
+    "generalize": {
+      "age": "If age ≥ 90, set to '90+'",
+      "dates": "Shift all dates by a random offset (consistent per client) or round to month/year"
+    },
+    "suppress": "If any cell in aggregate reporting has count < 5, suppress (replace with *) to prevent re-identification"
+  },
+
+  "compliance_notes": {
+    "hipaa": "All client data is PHI. Minimum necessary standard applies. Access controls required. Audit logs required. BAAs required with any vendor.",
+    "42_cfr_part_2": "If substance use information is captured during screening, additional federal protections apply. Cannot be shared without specific written consent. Cannot be used in legal proceedings.",
+    "state_law": "Missouri RSMo 191.656 (STI confidentiality), RSMo 630 (mental health records). Check state-specific laws for additional protections.",
+    "consent": "Written consent required before sharing individual-level data with any external organization. Consent must specify what data, with whom, for what purpose, and expiration date."
+  }
+}

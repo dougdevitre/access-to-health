@@ -5,7 +5,7 @@ org: CoTrackPro GitHub Org
 description: >
   Comprehensive AI operating system for public health professionals.
   20 roles, 25 populations, 50 eval cases, 25 slash commands with full
-  implementation specs, 10 MCP tools, 40+ reporting artifacts, bilingual
+  implementation specs, 10 MCP tools, 60+ reporting and communication artifacts, bilingual
   Spanish layer, 42 AI prompts, 10 SOPs, 6 campaigns, 8 email sequences.
   Evidence-based, trauma-informed, equity-driven.
   Missouri reference implementation with national applicability.
@@ -94,7 +94,7 @@ USER → Identify Role (roles/ROLE-REGISTRY.md)
 
 ## Step 1: Identify Role
 Ask: "What best describes your role?" → Route to `roles/ROLE-REGISTRY.md`
-20 roles across 9 pods: Surveillance, Community, Clinical, Education, Behavioral, Environment, Policy, Leadership, Preparedness
+20 roles across 9 pods: Surveillance, Community, Clinical, Behavioral Health, Maternal-Child Health, Education, Environment, Policy & Leadership, Operations
 
 ## Step 2: Identify Population
 If serving a specific community → Load from `populations/POPULATION-REGISTRY.md`
@@ -109,7 +109,9 @@ Use slash commands (`commands/COMMAND-SPECS.md`) or load role-specific workflow
 |---|---|
 | Role identification | `roles/ROLE-REGISTRY.md` |
 | Role workflows (deep) | `roles/epi.md`, `roles/chw.md`, `roles/phn.md`, `roles/hdo.md`, `roles/priority-roles.md` |
+| Remaining roles (10) | `roles/remaining-roles.md` |
 | Population guidance | `populations/POPULATION-REGISTRY.md` |
+| Black/African American deep dive | `populations/deep-dives/black-african-american.md` |
 | SDOH screening | `features/sdoh-screener.md` |
 | Resource navigation | `features/resource-navigator.md` |
 | Campaigns + messaging | `messaging/campaign-builder.md`, `messaging/social-media-library.md` |
@@ -119,10 +121,11 @@ Use slash commands (`commands/COMMAND-SPECS.md`) or load role-specific workflow
 | Funding sources | `references/funding-guide.md` |
 | Advocacy | `features/advocacy-toolkit.md` |
 | Education modules | `features/education-toolkit.md` |
-| Reporting templates (40+) | `artifacts/reporting-templates.md` |
+| Reporting templates (60+) | `artifacts/reporting-templates.md` |
 | Role-specific artifacts | `artifacts/role-artifacts.md` |
 | Team SOPs (10) | `scripts/team-sops.md` |
 | Cross-role workflows (8) | `workflows/cross-role-workflows.md` |
+| Workflows expanded (decision trees) | `workflows/cross-role-workflows-expanded.md` |
 | Command reference | `commands/COMMANDS.md` |
 | Command implementation | `commands/COMMAND-SPECS.md` |
 | Spanish / bilingual | `bilingual/spanish-layer.md` |
@@ -139,6 +142,8 @@ Use slash commands (`commands/COMMAND-SPECS.md`) or load role-specific workflow
 | Campaign generator | `tools/campaign-generator.ts` |
 | APHA PDF fetcher | `tools/apha-fetcher.js` |
 | Eval suite (50 cases) | `evals/EVAL-SUITE.md` |
+| Internal communication | `communication/internal-playbook.md` |
+| External communication | `communication/external-playbook.md` |
 | Audit report | `AUDIT.md` |
 
 ## Guardrails (Always Active)

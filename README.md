@@ -144,88 +144,92 @@ flowchart LR
 
 ## File Structure
 
+> ✅ = exists in repo | 📋 = planned
+
 ```
 access-to-health/                        46 files │ ~80,000 words
-├── SKILL.md                             Lean routing hub (progressive disclosure)
-├── README.md                            This file
-├── AUDIT.md                             Gap analysis and build plan
+├── SKILL.md                          ✅ Lean routing hub (progressive disclosure)
+├── README.md                         ✅ This file
+├── AUDIT.md                          ✅ Audit report and build plan
+├── LICENSE                           ✅ MIT license
+├── .gitignore                        ✅ Git ignore rules
 │
 ├── roles/                               20 PUBLIC HEALTH ROLES
-│   ├── ROLE-REGISTRY.md                 Index, pods, routing logic
-│   ├── epi.md                           Epidemiologist (deep)
-│   ├── chw.md                           Community Health Worker (deep)
-│   ├── phn.md                           Public Health Nurse (deep)
-│   ├── hdo.md                           Health Director (deep)
-│   ├── priority-roles.md               BHC, EHS, MCH, HCS, PMG, EPC
-│   ├── remaining-roles.md              DIS, NUT, SUP, SHC, OHC, CES, QIC, DAT, POL, HED
-│   └── all-roles.md                     Original 18-role reference
+│   ├── ROLE-REGISTRY.md              ✅ Index, pods, routing logic
+│   ├── epi.md                        📋 Epidemiologist (deep)
+│   ├── chw.md                        📋 Community Health Worker (deep)
+│   ├── phn.md                        📋 Public Health Nurse (deep)
+│   ├── hdo.md                        📋 Health Director (deep)
+│   ├── priority-roles.md            📋 BHC, EHS, MCH, HCS, PMG, EPC
+│   ├── remaining-roles.md           ✅ DIS, NUT, SUP, SHC, OHC, CES, QIC, DAT, POL, HED
+│   └── all-roles.md                  📋 Original 18-role reference
 │
 ├── populations/                         25 POPULATIONS + 10 DEEP DIVES
-│   ├── POPULATION-REGISTRY.md           Master registry
+│   ├── POPULATION-REGISTRY.md        ✅ Master registry (25 populations, routing, SDOH matrix)
 │   └── deep-dives/
-│       ├── black-african-american.md    Full deep dive (disparities, history, culture, engagement)
-│       └── all-deep-dives.md            Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
+│       ├── black-african-american.md ✅ Full deep dive (disparities, history, culture, engagement)
+│       └── all-deep-dives.md         📋 Hispanic, Pregnant, Homeless, PWUD, Immigrant, LGBTQ+,
 │                                         Older Adults, Justice-Involved, Rural
 │
 ├── workflows/                           8 CROSS-ROLE WORKFLOWS
-│   ├── cross-role-workflows.md          Original summaries
-│   └── cross-role-workflows-expanded.md Decision trees, timelines, templates, escalation
+│   ├── cross-role-workflows.md       📋 Original summaries
+│   └── cross-role-workflows-expanded.md ✅ Decision trees, timelines, templates, escalation
 │
 ├── commands/                            25 SLASH COMMANDS
-│   ├── COMMANDS.md                      Command reference
-│   └── COMMAND-SPECS.md                 Full INPUT→PROCESS→OUTPUT→ERROR specs
+│   ├── COMMANDS.md                   ✅ Command quick reference
+│   └── COMMAND-SPECS.md              ✅ Full INPUT→PROCESS→OUTPUT→ERROR specs
 │
 ├── communication/                       INTERNAL + EXTERNAL COMMUNICATION
-│   ├── internal-playbook.md             Staff, leadership, governance, interagency, frameworks
-│   └── external-playbook.md             Media, digital, regulatory, community presentations
+│   ├── internal-playbook.md          ✅ Staff, leadership, governance, interagency, frameworks
+│   └── external-playbook.md          ✅ Media, digital, regulatory, community presentations
 │
 ├── artifacts/                           60+ REPORTING ARTIFACTS
-│   ├── reporting-templates.md           40+ report templates (surveillance, grants, community, etc.)
-│   └── role-artifacts.md                13 role-specific document templates
+│   ├── reporting-templates.md        ✅ 60+ report templates (surveillance, grants, community, etc.)
+│   └── role-artifacts.md             ✅ 13 role-specific document templates
 │
 ├── features/                            CORE FEATURES
-│   ├── sdoh-screener.md                 PRAPARE/AHC/Quick Screen + workflow
-│   ├── resource-navigator.md            9 domains × 3 tiers + MO resources
-│   ├── advocacy-toolkit.md              Scripts, testimony, coalition, media
-│   └── education-toolkit.md             5 modules (CE, community, career, PH 101, TTT)
+│   ├── sdoh-screener.md              ✅ PRAPARE/AHC/Quick Screen + scoring + follow-up
+│   ├── resource-navigator.md         ✅ 9 domains × 3 tiers + MO resources
+│   ├── advocacy-toolkit.md           ✅ Scripts, testimony, coalition, HIA, media
+│   └── education-toolkit.md          ✅ 5 modules (CE, community, career, PH 101, TTT)
 │
 ├── messaging/                           CAMPAIGNS + CONTENT
-│   ├── campaign-builder.md              6 campaigns + planning framework
-│   ├── social-media-library.md          27 posts, 9 categories, hashtag strategy
-│   ├── trust-rebuilding-playbook.md     Local proxy model, HEAR framework, prebunking
-│   └── email-sequences.md              8 lifecycle sequences (30 total emails)
+│   ├── campaign-builder.md           ✅ 6 campaigns + planning framework
+│   ├── social-media-library.md       ✅ 27 posts, 9 categories, hashtag strategy
+│   ├── trust-rebuilding-playbook.md  ✅ Local proxy model, HEAR framework, prebunking
+│   └── email-sequences.md           ✅ 8 lifecycle sequences (30 total emails)
 │
 ├── references/                          KNOWLEDGE BASE
-│   ├── apha-knowledgebase.md            23 APHA topic areas synthesized
-│   ├── apha-url-index.md               Live URL index for runtime PDF ingestion
-│   ├── fiscal-crisis-brief.md           5-pillar Unified Health Blueprint
-│   ├── funding-guide.md                 Federal/state/foundation funding sources
-│   └── missouri-public-health.md        MO infrastructure, St. Louis data, programs
+│   ├── apha-knowledgebase.md         📋 23 APHA topic areas synthesized
+│   ├── apha-url-index.md            📋 Live URL index for runtime PDF ingestion
+│   ├── fiscal-crisis-brief.md        ✅ 5-pillar Unified Health Blueprint
+│   ├── funding-guide.md              ✅ Federal/state/foundation funding sources
+│   └── missouri-public-health.md     ✅ MO infrastructure, St. Louis data, programs
 │
 ├── bilingual/                           SPANISH LAYER
-│   └── spanish-layer.md                 Screening scripts, resource phrases, cultural concepts,
+│   └── spanish-layer.md              ✅ Screening scripts, resource phrases, cultural concepts,
 │                                         promotora model, social media, language access
 │
 ├── mcp/                                 MCP INTEGRATION
-│   └── MCP-SCHEMA.md                    10 tool schemas + connector integration map
+│   └── MCP-SCHEMA.md                 ✅ 10 tool schemas + connector integration map
 │
 ├── evals/                               EVALUATION
-│   └── EVAL-SUITE.md                    50 test cases across 5 categories
+│   └── EVAL-SUITE.md                 ✅ 50 test cases across 5 categories
 │
 ├── scripts/                             OPERATIONS
-│   └── team-sops.md                     10 SOPs
+│   └── team-sops.md                  ✅ 10 SOPs
 ├── schemas/                             DATA
-│   └── sdoh-data-model.json             5-table HIPAA-ready schema
+│   └── sdoh-data-model.json          ✅ 5-table HIPAA-ready schema
 ├── templates/                           GRANT + POLICY
-│   └── grant-and-policy-templates.md    LOI, narrative, logic model, budget, brief, resolution
+│   └── grant-and-policy-templates.md ✅ LOI, narrative, logic model, budget, brief, resolution
 ├── tools/                               DEVELOPER
-│   ├── sdoh-score.ts                    TypeScript SDOH risk scoring
-│   ├── campaign-generator.ts            AI campaign engine
-│   └── apha-fetcher.js                  Node.js PDF ingestion
+│   ├── sdoh-score.ts                 📋 TypeScript SDOH risk scoring
+│   ├── campaign-generator.ts         📋 AI campaign engine
+│   └── apha-fetcher.js               📋 Node.js PDF ingestion
 └── assets/                              REFERENCE
-    ├── ai-prompt-library.md             42 production prompts
-    ├── data-reference.md                Key statistics + MO data
-    └── engagement-calendar.csv          52-week calendar
+    ├── ai-prompt-library.md          📋 42 production prompts
+    ├── data-reference.md             📋 Key statistics + MO data
+    └── engagement-calendar.csv       📋 52-week calendar
 ```
 
 ## The "Access To" Family
@@ -238,7 +242,7 @@ access-to-health/                        46 files │ ~80,000 words
 | Services | access-to-services | Complete |
 | Peace | access-to-peace | Complete |
 | Safety | access-to-safety | Complete |
-| **Health** | **access-to-health** | **Complete (46 files, ~80K words)** |
+| **Health** | **access-to-health** | **In progress (35+ files live, 46 target)** |
 
 ## License
 

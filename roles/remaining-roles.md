@@ -22,7 +22,7 @@ Locate hard-to-reach individuals in community settings. Build rapport in sensiti
 
 # Role: WIC Nutritionist / Dietitian (NUT)
 
-> Pod: Nutrition | Key partnerships: PHN, MCH, CHW, HED
+> Pod: Maternal-Child Health | Key partnerships: PHN, MCH, CHW, HED
 > Daily focus: WIC certification, nutrition counseling, breastfeeding support, food prescriptions, community nutrition
 
 ## Workflows
@@ -44,7 +44,7 @@ Cooking demonstrations, farmers market SNAP/Double Up coordination, produce pres
 
 # Role: Substance Use Prevention Specialist (SUP)
 
-> Pod: Behavioral | Key partnerships: BHC, CHW, SHC, HED, POL
+> Pod: Behavioral Health | Key partnerships: BHC, CHW, SHC, HED, POL
 > Daily focus: Community coalitions, youth prevention, SBIRT, harm reduction, environmental strategies
 
 ## Workflows
@@ -66,7 +66,7 @@ Naloxone distribution and training → Syringe service programs → Fentanyl tes
 
 # Role: School Health Coordinator (SHC)
 
-> Pod: School | Key partnerships: HED, PHN, BHC, SUP, NUT
+> Pod: Education | Key partnerships: HED, PHN, BHC, SUP, NUT
 > Daily focus: Wellness policy, school-based health services, mental health, health education, chronic disease management
 
 ## Workflows
@@ -140,7 +140,7 @@ Implement participatory processes for resource allocation. Train community membe
 Maintain system aligned with PHAB Domain 9. Measures linked to strategic plan objectives. Departmental and program-level dashboards. Quarterly performance review meetings. Annual revision of measures.
 
 ### 2: PHAB Accreditation
-Lead accreditation (10 domains, 30+ standards, 100+ measures). Manage documentation. Coordinate site visit. Maintain status through annual reports and 5-year reaccreditation. If not yet accredited: Gap analysis → Documentation collection → Pre-site visit mock review → Application → Site visit.
+Lead accreditation (12 domains, 30+ standards, 100+ measures). Manage documentation. Coordinate site visit. Maintain status through annual reports and 5-year reaccreditation. If not yet accredited: Gap analysis → Documentation collection → Pre-site visit mock review → Application → Site visit.
 
 ### 3: Continuous Quality Improvement (CQI)
 PDSA (Plan-Do-Study-Act) methodology. Tools: Fishbone (Ishikawa) diagrams, process mapping, run charts, Pareto charts, control charts, driver diagrams, affinity diagrams. Train staff. Facilitate projects. Track portfolio. Celebrate and disseminate.
@@ -154,7 +154,7 @@ Design and administer client satisfaction surveys. Analyze results. Identify imp
 
 # Role: Data Analyst / Informaticist (DAT)
 
-> Pod: Data | Key partnerships: EPI, PMG, QIC, HDO
+> Pod: Surveillance | Key partnerships: EPI, PMG, QIC, HDO
 > Daily focus: Dashboards, data quality, reporting, visualization, integration, analytics
 
 ## Workflows
@@ -176,7 +176,7 @@ Predictive modeling (disease forecasting, resource allocation). Geospatial analy
 
 # Role: Policy Analyst / Advocate (POL)
 
-> Pod: Policy | Key partnerships: HDO, HCS, CES, DAT
+> Pod: Policy & Leadership | Key partnerships: HDO, HCS, CES, DAT
 > Daily focus: Legislative tracking, HIA, coalition leadership, Health in All Policies
 
 ## Workflows
