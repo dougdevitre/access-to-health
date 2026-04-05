@@ -97,74 +97,74 @@
 ### roles/ — 20 Public Health Roles
 | File | Roles Covered |
 |------|--------------|
-| `ROLE-REGISTRY.md` | Master index, pod structure, routing |
-| `epi.md` | Epidemiologist (5 workflows) |
-| `chw.md` | Community Health Worker (5 workflows) |
-| `phn.md` | Public Health Nurse (5 workflows) |
-| `hdo.md` | Health Director (5 workflows) |
-| `priority-roles.md` | BHC, EHS, MCH, HCS, PMG, EPC |
-| `remaining-roles.md` | DIS, NUT, SUP, SHC, OHC, CES, QIC, DAT, POL, HED |
-| `all-roles.md` | Quick reference for all 20 |
+| `roles/ROLE-REGISTRY.md` | Master index, pod structure, routing |
+| `roles/epi.md` | Epidemiologist (5 workflows) |
+| `roles/chw.md` | Community Health Worker (5 workflows) |
+| `roles/phn.md` | Public Health Nurse (5 workflows) |
+| `roles/hdo.md` | Health Director (5 workflows) |
+| `roles/priority-roles.md` | BHC, EHS, MCH, HCS, PMG, EPC |
+| `roles/remaining-roles.md` | DIS, NUT, SUP, SHC, OHC, CES, QIC, DAT, POL, HED |
+| `roles/all-roles.md` | Quick reference for all 20 |
 
 ### populations/ — 25 Populations
 | File | Content |
 |------|---------|
-| `POPULATION-REGISTRY.md` | 25 profiles, SDOH matrix, intersectionality |
-| `deep-dives/black-african-american.md` | Full deep dive: disparities, history, culture |
-| `deep-dives/all-deep-dives.md` | 9 populations: HIS, PRG, HML, PWUD, IMM, LGBT, OAD, JUS, RUR |
+| `populations/POPULATION-REGISTRY.md` | 25 profiles, SDOH matrix, intersectionality |
+| `populations/deep-dives/black-african-american.md` | Full deep dive: disparities, history, culture |
+| `populations/deep-dives/all-deep-dives.md` | 9 populations: HIS, PRG, HML, PWUD, IMM, LGBT, OAD, JUS, RUR |
 
 ### workflows/ — 8 Cross-Role Workflows
 | File | Content |
 |------|---------|
-| `cross-role-workflows.md` | Quick reference for all 8 |
-| `cross-role-workflows-expanded.md` | Full decision trees, timelines, templates |
+| `workflows/cross-role-workflows.md` | Quick reference for all 8 |
+| `workflows/cross-role-workflows-expanded.md` | Full decision trees, timelines, templates |
 
 ### commands/ — 25 Slash Commands
 | File | Content |
 |------|---------|
-| `COMMANDS.md` | Quick reference card |
-| `COMMAND-SPECS.md` | Full I/O/P/E specs |
+| `commands/COMMANDS.md` | Quick reference card |
+| `commands/COMMAND-SPECS.md` | Full I/O/P/E specs |
 
 ### features/ — Core Features
 | File | Content |
 |------|---------|
-| `sdoh-screener.md` | PRAPARE, AHC, Quick Screen + scoring |
-| `resource-navigator.md` | 9 domains × 3 tiers + MO resources |
-| `advocacy-toolkit.md` | Testimony, legislator visits, HIA |
-| `education-toolkit.md` | 5 modules: CE, community, career, PH 101, TTT |
+| `features/sdoh-screener.md` | PRAPARE, AHC, Quick Screen + scoring |
+| `features/resource-navigator.md` | 9 domains × 3 tiers + MO resources |
+| `features/advocacy-toolkit.md` | Testimony, legislator visits, HIA |
+| `features/education-toolkit.md` | 5 modules: CE, community, career, PH 101, TTT |
 
 ### integration/ — Cross-Sector
 | File | Audience |
 |------|---------|
-| `developer-guide.md` | Engineers, health tech |
-| `city-planning-health.md` | City planners, housing, transportation |
-| `fiscal-operations.md` | Accountants, CFOs, grant managers |
-| `government-toolkit.md` | Elected officials, legislative staff |
-| `health-tech-vendor-guide.md` | Technology companies |
-| `cross-sector-data-standards.md` | Data engineers, interoperability |
+| `integration/developer-guide.md` | Engineers, health tech |
+| `integration/city-planning-health.md` | City planners, housing, transportation |
+| `integration/fiscal-operations.md` | Accountants, CFOs, grant managers |
+| `integration/government-toolkit.md` | Elected officials, legislative staff |
+| `integration/health-tech-vendor-guide.md` | Technology companies |
+| `integration/cross-sector-data-standards.md` | Data engineers, interoperability |
 
 ### messaging/ — Campaigns and Content
 | File | Content |
 |------|---------|
-| `campaign-builder.md` | 6 campaigns + planning framework |
-| `social-media-library.md` | 27 posts, 9 categories |
-| `trust-rebuilding-playbook.md` | HEAR framework, prebunking, proxy model |
-| `email-sequences.md` | 8 sequences, 30 emails |
+| `messaging/campaign-builder.md` | 6 campaigns + planning framework |
+| `messaging/social-media-library.md` | 27 posts, 9 categories |
+| `messaging/trust-rebuilding-playbook.md` | HEAR framework, prebunking, proxy model |
+| `messaging/email-sequences.md` | 8 sequences, 30 emails |
 
 ### communication/ — Playbooks
 | File | Content |
 |------|---------|
-| `internal-playbook.md` | Staff, leadership, board, interagency |
-| `external-playbook.md` | Media, digital, regulatory, presentations |
+| `communication/internal-playbook.md` | Staff, leadership, board, interagency |
+| `communication/external-playbook.md` | Media, digital, regulatory, presentations |
 
 ### references/ — Knowledge Base
 | File | Content |
 |------|---------|
-| `apha-knowledgebase.md` | 23 APHA topic areas |
-| `apha-url-index.md` | Reference URLs |
-| `missouri-public-health.md` | MO infrastructure, data, organizations |
-| `funding-guide.md` | Federal, state, foundation sources |
-| `fiscal-crisis-brief.md` | 5-pillar sustainability blueprint |
+| `references/apha-knowledgebase.md` | 23 APHA topic areas |
+| `references/apha-url-index.md` | Reference URLs |
+| `references/missouri-public-health.md` | MO infrastructure, data, organizations |
+| `references/funding-guide.md` | Federal, state, foundation sources |
+| `references/fiscal-crisis-brief.md` | 5-pillar sustainability blueprint |
 
 ### Other Directories
 | Directory | Files | Content |
