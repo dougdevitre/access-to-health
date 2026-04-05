@@ -155,5 +155,11 @@ nav:
       - Engagement Calendar: interactive/engagement-calendar.md
       - MCP Tool Schemas: mcp/MCP-SCHEMA.md
 
+  - Getting Started:
+      - Partner Onboarding: integration/partner-onboarding.md
+      - Deployment Guide: deployment.md
+      - State Adaptation Template: references/state-adaptation-template.md
+      - Changelog: CHANGELOG.md
+
   - AI Skill:
       - SKILL.md: SKILL.md

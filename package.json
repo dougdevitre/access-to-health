@@ -14,6 +14,7 @@
     "roi": "npx ts-node tools/roi-calculator.ts",
     "campaign": "npx ts-node tools/campaign-generator.ts",
     "apha": "node tools/apha-fetcher.js",
+    "serve": "npx ts-node tools/api-server.ts",
     "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore site",
     "lint:links": "ts-node tools/validate-links.ts",
     "test": "jest",
