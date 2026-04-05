@@ -149,5 +149,11 @@ nav:
       - Bilingual / Spanish: bilingual/spanish-layer.md
       - MCP Tool Schemas: mcp/MCP-SCHEMA.md
 
+  - Interactive Tools:
+      - SDOH Quick Screen: interactive/sdoh-quick-screen.md
+      - ROI Calculator: interactive/roi-calculator.md
+      - Engagement Calendar: interactive/engagement-calendar.md
+      - MCP Tool Schemas: mcp/MCP-SCHEMA.md
+
   - AI Skill:
       - SKILL.md: SKILL.md
