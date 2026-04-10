@@ -2,11 +2,46 @@
 title: Access to Health
 ---
 
+<div class="hero" markdown>
+
 # Access to Health
 
 **Comprehensive AI Operating System for Public Health Professionals**
 
 Part of the [CoTrackPro "Access To" Initiative](https://github.com/CoTrackPro) — open-source civic resource systems for justice, education, housing, services, peace, safety, and health.
+
+</div>
+
+---
+
+<div class="stats" markdown>
+
+<div class="stat" markdown>
+**20**
+Roles
+</div>
+<div class="stat" markdown>
+**25**
+Populations
+</div>
+<div class="stat" markdown>
+**26**
+Deep Dives
+</div>
+<div class="stat" markdown>
+**25**
+Commands
+</div>
+<div class="stat" markdown>
+**60+**
+Templates
+</div>
+<div class="stat" markdown>
+**10**
+MCP Tools
+</div>
+
+</div>
 
 ---
 
@@ -14,9 +49,47 @@ Part of the [CoTrackPro "Access To" Initiative](https://github.com/CoTrackPro) �
 
 A complete operating system for public health — not just a reference library. Routes professionals by role, loads population-specific guidance, executes workflows via slash commands, and generates artifacts from screening results to board presentations.
 
-**20 roles. 25 populations. 10 deep dives. 50 eval cases. 25 slash commands. 10 MCP tools. 60+ reporting artifacts. Bilingual Spanish layer. 42 AI prompts. 10 SOPs. 8 cross-role workflows. 52-week engagement calendar. Cross-sector integration for developers, city planners, accountants, government, and technology companies.**
-
 Missouri reference implementation. Nationally applicable.
+
+<div class="grid cards" markdown>
+
+-   :material-account-group:{ .lg .middle } **Roles & Populations**
+
+    ---
+
+    20 roles across 9 pods. 25 populations with 26 individual deep dives covering structural context, cultural considerations, and actionable strategies.
+
+    [:octicons-arrow-right-24: Role Registry](roles/ROLE-REGISTRY.md)
+    [:octicons-arrow-right-24: Population Registry](populations/POPULATION-REGISTRY.md)
+
+-   :material-console:{ .lg .middle } **Commands & Workflows**
+
+    ---
+
+    25 slash commands with full I/O/P/E specs. 8 cross-role workflows with decision trees for coordinated response.
+
+    [:octicons-arrow-right-24: Commands](commands/COMMANDS.md)
+    [:octicons-arrow-right-24: Workflows](workflows/cross-role-workflows.md)
+
+-   :material-file-document-multiple:{ .lg .middle } **Artifacts & Templates**
+
+    ---
+
+    60+ reporting templates, 13 role artifacts, grant and policy templates. From screening results to board presentations.
+
+    [:octicons-arrow-right-24: Reporting Templates](artifacts/reporting-templates.md)
+    [:octicons-arrow-right-24: Grant Templates](grant-templates/grant-and-policy-templates.md)
+
+-   :material-connection:{ .lg .middle } **Cross-Sector Integration**
+
+    ---
+
+    Guides for developers, city planners, accountants, government officials, and technology companies. FHIR R4, open data APIs, and MCP tools.
+
+    [:octicons-arrow-right-24: Developer Guide](integration/developer-guide.md)
+    [:octicons-arrow-right-24: Data Standards](integration/cross-sector-data-standards.md)
+
+</div>
 
 ## Quick Start
 
