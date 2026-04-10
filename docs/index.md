@@ -104,8 +104,8 @@ Missouri reference implementation. Nationally applicable.
 
     1. [Architecture & APIs](integration/developer-guide.md) — FHIR R4, SMART on FHIR, compliance
     2. [Data Standards](integration/cross-sector-data-standards.md) — Gravity Project, open data APIs
-    3. [Schemas](integration/cross-sector-data-standards.md) — SDOH data model + FHIR mapping
-    4. [Tools](integration/developer-guide.md) — TypeScript SDOH scorer, ROI calculator, campaign engine
+    3. [Schemas](schemas/index.md) — SDOH data model + FHIR mapping
+    4. [Tools](tools/index.md) — TypeScript SDOH scorer, ROI calculator, campaign engine
 
 === "City Planner"
 

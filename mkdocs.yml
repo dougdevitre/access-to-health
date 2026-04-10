@@ -164,6 +164,8 @@ nav:
 
   - Cross-Sector Integration:
       - Developer Guide: integration/developer-guide.md
+      - Developer Tools: tools/index.md
+      - Data Schemas: schemas/index.md
       - City Planning & Health: integration/city-planning-health.md
       - Fiscal Operations: integration/fiscal-operations.md
       - Government Toolkit: integration/government-toolkit.md
