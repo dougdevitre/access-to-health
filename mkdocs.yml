@@ -10,6 +10,7 @@ copyright: >
 
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -27,16 +28,25 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.indexes
     - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.code.annotate
     - content.action.edit
+    - content.tabs.link
+    - toc.follow
   icon:
     repo: fontawesome/brands/github
+    logo: material/heart-pulse
 
 plugins:
   - search
@@ -56,9 +66,19 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - attr_list
+  - def_list
+  - footnotes
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.mark
   - toc:
       permalink: true
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   social:
@@ -144,6 +164,8 @@ nav:
 
   - Cross-Sector Integration:
       - Developer Guide: integration/developer-guide.md
+      - Developer Tools: tools/index.md
+      - Data Schemas: schemas/index.md
       - City Planning & Health: integration/city-planning-health.md
       - Fiscal Operations: integration/fiscal-operations.md
       - Government Toolkit: integration/government-toolkit.md
@@ -169,7 +191,6 @@ nav:
       - SDOH Quick Screen: interactive/sdoh-quick-screen.md
       - ROI Calculator: interactive/roi-calculator.md
       - Engagement Calendar: interactive/engagement-calendar.md
-      - MCP Tool Schemas: mcp/MCP-SCHEMA.md
 
   - Getting Started:
       - Partner Onboarding: integration/partner-onboarding.md
