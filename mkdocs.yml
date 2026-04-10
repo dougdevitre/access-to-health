@@ -88,16 +88,32 @@ nav:
   - Populations:
       - Population Registry: populations/POPULATION-REGISTRY.md
       - Deep Dives:
+          - All Deep Dives: populations/deep-dives/all-deep-dives.md
+          - Asian American & Pacific Islander: populations/deep-dives/asian-american-pacific-islander.md
           - Black / African American: populations/deep-dives/black-african-american.md
+          - Caregivers: populations/deep-dives/caregivers.md
+          - Children & Adolescents: populations/deep-dives/children-adolescents.md
+          - Chronic Conditions: populations/deep-dives/chronic-conditions.md
+          - College Students: populations/deep-dives/college-students.md
+          - Congregate Settings: populations/deep-dives/congregate-settings.md
+          - Faith Communities: populations/deep-dives/faith-communities.md
           - Hispanic / Latino: populations/deep-dives/hispanic-latino.md
-          - Pregnant & Postpartum: populations/deep-dives/pregnant-postpartum.md
           - People Experiencing Homelessness: populations/deep-dives/homeless.md
-          - People Who Use Drugs: populations/deep-dives/people-who-use-drugs.md
           - Immigrant & Refugee: populations/deep-dives/immigrant-refugee.md
-          - LGBTQ+: populations/deep-dives/lgbtq.md
-          - Older Adults: populations/deep-dives/older-adults.md
           - Justice-Involved / Reentry: populations/deep-dives/justice-involved.md
+          - LGBTQ+: populations/deep-dives/lgbtq.md
+          - Limited English Proficiency: populations/deep-dives/limited-english.md
+          - Low Income: populations/deep-dives/low-income.md
+          - Mental Health Conditions: populations/deep-dives/mental-health-conditions.md
+          - Migrant & Seasonal Farmworkers: populations/deep-dives/migrant-farmworkers.md
+          - Native American & Alaska Native: populations/deep-dives/native-american.md
+          - Older Adults: populations/deep-dives/older-adults.md
+          - People Who Use Drugs: populations/deep-dives/people-who-use-drugs.md
+          - People with Disabilities: populations/deep-dives/people-with-disabilities.md
+          - Pregnant & Postpartum: populations/deep-dives/pregnant-postpartum.md
           - Rural Communities: populations/deep-dives/rural.md
+          - Uninsured: populations/deep-dives/uninsured.md
+          - Veterans: populations/deep-dives/veterans.md
 
   - Workflows:
       - Quick Reference: workflows/cross-role-workflows.md
