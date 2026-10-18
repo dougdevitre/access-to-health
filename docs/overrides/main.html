@@ -45,3 +45,117 @@
     </dialog>
   {% endif %}
 {% endblock %}
+
+{#-
+  Accessibility repairs for markup Material generates itself, re-run on every
+  page load (navigation.instant swaps pages without a full reload):
+  - the page-load progress bar gets a name;
+  - task-list checkboxes are named after their item, since their <label>
+    wraps only the box;
+  - tables and code blocks that scroll sideways become focusable regions, so
+    a keyboard user can scroll them with the arrow keys;
+  - the menu button that opens the navigation drawer on phones is a <label>,
+    which a keyboard cannot reach. It becomes a button (Enter or Space opens
+    the drawer, Escape closes it), which is what lets extra.css take the
+    closed drawer's links out of the Tab order.
+-#}
+{% block scripts %}
+  {{ super() }}
+  <script>
+    (function () {
+      "use strict";
+
+      function nameTaskBoxes() {
+        document.querySelectorAll(".task-list-control input[type=checkbox]").forEach(function (box) {
+          if (box.hasAttribute("aria-label")) return;
+          var item = box.closest("li");
+          if (!item) return;
+          var copy = item.cloneNode(true);
+          copy.querySelectorAll("ul, ol, .task-list-control").forEach(function (n) { n.remove(); });
+          var name = copy.textContent.replace(/\s+/g, " ").trim();
+          if (name) box.setAttribute("aria-label", name);
+        });
+      }
+
+      function markScrollers() {
+        document.querySelectorAll(".md-typeset__scrollwrap, .md-typeset pre > code").forEach(function (box) {
+          var scrolls = box.scrollWidth > box.clientWidth + 1;
+          var marked = box.hasAttribute("data-atd-scroll");
+          if (scrolls && !marked && !box.hasAttribute("tabindex")) {
+            box.setAttribute("data-atd-scroll", "");
+            box.setAttribute("tabindex", "0");
+            if (box.classList.contains("md-typeset__scrollwrap")) {
+              box.setAttribute("role", "region");
+              box.setAttribute("aria-label", "Table, scrolls sideways");
+            }
+          } else if (!scrolls && marked) {
+            box.removeAttribute("data-atd-scroll");
+            box.removeAttribute("tabindex");
+            box.removeAttribute("role");
+            box.removeAttribute("aria-label");
+          }
+        });
+      }
+
+      function drawerButton() {
+        var toggle = document.getElementById("__drawer");
+        var button = document.querySelector('.md-header label.md-header__button[for="__drawer"]');
+        if (!toggle || !button || button.hasAttribute("data-atd-ready")) return;
+        button.setAttribute("data-atd-ready", "");
+        button.setAttribute("role", "button");
+        button.setAttribute("tabindex", "0");
+        button.setAttribute("aria-label", "Navigation menu");
+
+        function sync() {
+          button.setAttribute("aria-expanded", toggle.checked ? "true" : "false");
+        }
+        function set(open) {
+          if (toggle.checked === open) return;
+          toggle.checked = open;
+          toggle.dispatchEvent(new Event("change", { bubbles: true }));
+          sync();
+        }
+
+        sync();
+        toggle.addEventListener("change", sync);
+        button.addEventListener("keydown", function (event) {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          set(!toggle.checked);
+          if (toggle.checked) {
+            var first = document.querySelector(".md-sidebar--primary a[href], .md-sidebar--primary label[tabindex]");
+            if (first) first.focus();
+          }
+        });
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && toggle.checked) {
+            set(false);
+            button.focus();
+          }
+        });
+      }
+
+      function repair() {
+        var bar = document.querySelector(".md-progress[role=progressbar]");
+        if (bar && !bar.hasAttribute("aria-label")) bar.setAttribute("aria-label", "Loading page");
+        drawerButton();
+        nameTaskBoxes();
+        markScrollers();
+      }
+
+      var timer;
+      window.addEventListener("resize", function () {
+        clearTimeout(timer);
+        timer = setTimeout(markScrollers, 200);
+      });
+
+      if (window.document$ && typeof window.document$.subscribe === "function") {
+        window.document$.subscribe(repair);
+      } else if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", repair);
+      } else {
+        repair();
+      }
+    })();
+  </script>
+{% endblock %}

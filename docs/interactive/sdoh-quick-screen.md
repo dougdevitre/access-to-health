@@ -22,70 +22,60 @@ disclaimer_ack: true
 
 <div id="sdoh-screen">
 
-<div class="screening-question" id="q1-block">
-<h3>Question 1: Basic Needs</h3>
-<p><strong>In the past year, have you or your family ever had to go without food, heat, or a place to sleep?</strong></p>
+<div class="screening-question" id="q1-block" role="group" aria-labelledby="q1-title q1-text">
+<h3 id="q1-title">Question 1: Basic Needs</h3>
+<p id="q1-text"><strong>In the past year, have you or your family ever had to go without food, heat, or a place to sleep?</strong></p>
 <button class="md-button" onclick="answer('q1', true)">Yes</button>
 <button class="md-button md-button--primary" onclick="answer('q1', false)">No</button>
-<p id="q1-result" class="result-text"></p>
+<p id="q1-result" class="result-text" tabindex="-1"></p>
 </div>
 
-<div class="screening-question" id="q2-block">
-<h3>Question 2: Transportation</h3>
-<p><strong>Do you have trouble getting to medical appointments or the pharmacy?</strong></p>
+<div class="screening-question" id="q2-block" role="group" aria-labelledby="q2-title q2-text">
+<h3 id="q2-title">Question 2: Transportation</h3>
+<p id="q2-text"><strong>Do you have trouble getting to medical appointments or the pharmacy?</strong></p>
 <button class="md-button" onclick="answer('q2', true)">Yes</button>
 <button class="md-button md-button--primary" onclick="answer('q2', false)">No</button>
-<p id="q2-result" class="result-text"></p>
+<p id="q2-result" class="result-text" tabindex="-1"></p>
 </div>
 
-<div class="screening-question" id="q3-block">
-<h3>Question 3: Medication Access</h3>
-<p><strong>In the past year, have you been unable to get a medication or treatment that a doctor prescribed?</strong></p>
+<div class="screening-question" id="q3-block" role="group" aria-labelledby="q3-title q3-text">
+<h3 id="q3-title">Question 3: Medication Access</h3>
+<p id="q3-text"><strong>In the past year, have you been unable to get a medication or treatment that a doctor prescribed?</strong></p>
 <button class="md-button" onclick="answer('q3', true)">Yes</button>
 <button class="md-button md-button--primary" onclick="answer('q3', false)">No</button>
-<p id="q3-result" class="result-text"></p>
+<p id="q3-result" class="result-text" tabindex="-1"></p>
 </div>
 
-<div class="screening-question" id="q4-block">
-<h3>Question 4: Safety</h3>
-<p><strong>Do you feel safe where you live?</strong></p>
+<div class="screening-question" id="q4-block" role="group" aria-labelledby="q4-title q4-text">
+<h3 id="q4-title">Question 4: Safety</h3>
+<p id="q4-text"><strong>Do you feel safe where you live?</strong></p>
 <button class="md-button md-button--primary" onclick="answer('q4', false)">Yes — I feel safe</button>
 <button class="md-button" onclick="answer('q4', true)">No — I do not feel safe</button>
-<p id="q4-result" class="result-text"></p>
+<p id="q4-result" class="result-text" tabindex="-1"></p>
 </div>
 
-<div class="screening-question" id="q5-block">
-<h3>Question 5: Mental Health</h3>
-<p><strong>In the past 2 weeks, have you felt down, depressed, or hopeless?</strong></p>
+<div class="screening-question" id="q5-block" role="group" aria-labelledby="q5-title q5-text">
+<h3 id="q5-title">Question 5: Mental Health</h3>
+<p id="q5-text"><strong>In the past 2 weeks, have you felt down, depressed, or hopeless?</strong></p>
 <button class="md-button" onclick="answer('q5', true)">Yes</button>
 <button class="md-button md-button--primary" onclick="answer('q5', false)">No</button>
-<p id="q5-result" class="result-text"></p>
+<p id="q5-result" class="result-text" tabindex="-1"></p>
 </div>
 
 </div>
 
 ---
 
-<div id="results-section" style="display:none;">
-
-## Results
-
+<div id="results-section" hidden>
+<h2 id="results-title" tabindex="-1">Results</h2>
 <div id="risk-summary"></div>
-
-### Flagged Domains
-
+<h3>Flagged Domains</h3>
 <div id="flagged-domains"></div>
-
-### Recommended Next Steps
-
+<h3>Recommended Next Steps</h3>
 <div id="recommendations"></div>
-
-### Follow-Up Schedule
-
+<h3>Follow-Up Schedule</h3>
 <div id="followup"></div>
-
 <button class="md-button md-button--primary" onclick="resetScreen()" style="margin-top: 1em;">Start Over</button>
-
 </div>
 
 <style>
@@ -98,15 +88,41 @@ disclaimer_ack: true
 .screening-question button {
   margin: 0.5em 0.5em 0 0;
 }
+.screening-question .md-button {
+  min-height: 44px;
+}
 .result-text {
   margin-top: 0.5em;
   font-weight: bold;
 }
-.risk-none { color: #4caf50; }
-.risk-low { color: #8bc34a; }
-.risk-moderate { color: #ff9800; }
-.risk-high { color: #f44336; }
-.risk-critical { color: #b71c1c; font-weight: bold; }
+.result-text:focus,
+h2#results-title:focus {
+  outline: none;
+}
+h2#results-title {
+  scroll-margin-top: 4rem;
+}
+/* Risk colours, each at least 4.5:1 on the page background in its scheme.
+   The word and the symbol carry the meaning too; colour is never alone. */
+:root {
+  --atd-risk-none: #2e7d32;
+  --atd-risk-low: #4f7a28;
+  --atd-risk-moderate: #a35200;
+  --atd-risk-high: #c62828;
+  --atd-risk-critical: #b71c1c;
+}
+[data-md-color-scheme="slate"] {
+  --atd-risk-none: #81c784;
+  --atd-risk-low: #aed581;
+  --atd-risk-moderate: #ffb74d;
+  --atd-risk-high: #ef9a9a;
+  --atd-risk-critical: #ff8a80;
+}
+.risk-none { color: var(--atd-risk-none); }
+.risk-low { color: var(--atd-risk-low); }
+.risk-moderate { color: var(--atd-risk-moderate); }
+.risk-high { color: var(--atd-risk-high); }
+.risk-critical { color: var(--atd-risk-critical); font-weight: bold; }
 .domain-card {
   border-left: 4px solid var(--md-primary-fg-color);
   padding: 0.75em 1em;
@@ -148,7 +164,17 @@ function answer(qid, flagged) {
 
   if (Object.keys(responses).length === 5) {
     showResults();
+  } else {
+    // The pressed button is now disabled, which drops keyboard focus to the
+    // top of the page. Move it to the answer instead, so it is read out and
+    // the next Tab reaches the next question.
+    el.focus();
   }
+}
+
+// Respect the reduced-motion setting when scrolling to a section.
+function scrollBehavior() {
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 }
 
 function showResults() {
@@ -194,8 +220,10 @@ function showResults() {
     '<p>Schedule follow-up in <strong>' + followDays + ' day' + (followDays !== 1 ? 's' : '') +
     '</strong> per risk level protocol.</p>';
 
-  document.getElementById('results-section').style.display = 'block';
-  document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('results-section').hidden = false;
+  var title = document.getElementById('results-title');
+  title.scrollIntoView({ behavior: scrollBehavior() });
+  title.focus({ preventScroll: true });
 }
 
 function resetScreen() {
@@ -206,7 +234,8 @@ function resetScreen() {
     var block = document.getElementById(qid + '-block');
     block.querySelectorAll('button').forEach(function(b) { b.disabled = false; b.style.opacity = '1'; });
   });
-  document.getElementById('results-section').style.display = 'none';
-  document.getElementById('sdoh-screen').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('results-section').hidden = true;
+  document.getElementById('sdoh-screen').scrollIntoView({ behavior: scrollBehavior() });
+  document.querySelector('#q1-block button').focus({ preventScroll: true });
 }
 </script>
