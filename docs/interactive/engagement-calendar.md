@@ -1,3 +1,7 @@
+---
+disclaimer_ack: true
+---
+
 # Interactive Engagement Calendar
 
 > 52-week public health engagement calendar with health observances, actions, and role assignments

@@ -1,3 +1,7 @@
+---
+disclaimer_ack: true
+---
+
 # Interactive SDOH Quick Screen
 
 > 5-question rapid triage tool for community outreach and home visits

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{#-
+  Disclaimer shown inside the published site (interim wording, pending
+  attorney review). The short notice sits in the announcement bar at the top
+  of every page, including 404. Pages whose front matter sets
+  `disclaimer_ack: true` (the interactive tools) also carry the one-time
+  acknowledgment dialog, driven by javascripts/disclaimer.js.
+-#}
+
+{% block announce %}
+  <section class="atd-notice" aria-label="Disclaimer">
+    <p>
+      Educational information only. Access to Health is not legal,
+      medical, mental health, financial or safety advice, and using it creates
+      no professional relationship. In danger now? Call
+      <a class="atd-tel" href="tel:911">911</a>. For crisis support, call or
+      text <a class="atd-tel" href="tel:988">988</a>. Confirm anything
+      important with the official source or a licensed professional.
+      <a class="atd-more" href="https://github.com/dougdevitre/access-to-health/blob/main/DISCLAIMER.md">Read the full disclaimer</a>
+    </p>
+  </section>
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.disclaimer_ack %}
+    <dialog class="atd-ack" data-atd-ack aria-labelledby="atd-ack-title" aria-describedby="atd-ack-body">
+      <h2 id="atd-ack-title" tabindex="-1">Before you use this tool</h2>
+      <div id="atd-ack-body">
+        <ul>
+          <li>Access to Health provides general educational information only. It is not legal, medical, mental health, financial or safety advice. Using it does not create an attorney-client, clinician-patient or any other professional relationship with Doug Devitre, CoTrackPro or any contributor.</li>
+          <li><strong>Not for emergencies.</strong> If anyone is in danger, call <a class="atd-tel" href="tel:911">911</a>. For crisis support, call or text <a class="atd-tel" href="tel:988">988</a>.</li>
+          <li><strong>Not a substitute for a professional.</strong> Talk with a licensed attorney, clinician or trained advocate about your situation.</li>
+          <li><strong>Information can be wrong or out of date.</strong> Laws, programs, phone numbers, eligibility rules and deadlines change. Confirm everything with the official source before you rely on it.</li>
+          <li><strong>AI output can be incorrect.</strong> Review everything it produces. You are responsible for the decisions you make and anything you file or send.</li>
+          <li><strong>Protect privacy.</strong> Do not enter names, case numbers, addresses or other details that identify a person.</li>
+          <li><strong>No endorsement.</strong> Not affiliated with or endorsed by any court, agency or organization it mentions.</li>
+          <li><strong>No warranty.</strong> Provided "as is," without warranties of any kind. To the fullest extent the law allows, the maintainers and contributors are not liable for damages arising from its use.</li>
+        </ul>
+      </div>
+      <p class="atd-ack__actions">
+        <button type="button" class="md-button md-button--primary" data-atd-ack-accept>I understand</button>
+      </p>
+    </dialog>
+  {% endif %}
+{% endblock %}
