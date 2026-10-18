@@ -100,6 +100,9 @@ jobs:
           echo
           if [ "${{ steps.internal.outputs.exit_code }}" != "0" ]; then
             echo "## Internal links"; cat lychee/internal.txt; echo
+            grep -E '^  [^ ].*:[0-9]+$' lychee/internal.txt | while IFS= read -r line; do
+              echo "::error title=Broken internal link::${line#"${line%%[! ]*}"}"
+            done || true
           fi
           echo "## Web links"
           cat lychee/report.md
