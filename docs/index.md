@@ -51,6 +51,8 @@ A complete operating system for public health — not just a reference library. 
 
 Missouri reference implementation. Nationally applicable.
 
+<!-- Material grid cards need 4-space list indentation -->
+<!-- markdownlint-disable MD030 -->
 <div class="grid cards" markdown>
 
 -   :material-account-group:{ .lg .middle } **Roles & Populations**
@@ -90,6 +92,7 @@ Missouri reference implementation. Nationally applicable.
     [:octicons-arrow-right-24: Data Standards](integration/cross-sector-data-standards.md)
 
 </div>
+<!-- markdownlint-enable MD030 -->
 
 ## Quick Start
 

@@ -109,6 +109,15 @@ function resolveLink(fromFile: string, link: string): string {
   if (fs.existsSync(rootCandidate)) return rootCandidate;
   if (fs.existsSync(relativeCandidate)) return relativeCandidate;
 
+  // Folders symlinked into docs/ (e.g. docs/tools -> ../tools) are published by
+  // MkDocs from docs/, so their relative links resolve from there.
+  const relDir = path.relative(ROOT, fromDir);
+  const docsLink = path.join(ROOT, "docs", relDir.split(path.sep)[0]);
+  if (relDir && fs.existsSync(docsLink) && fs.lstatSync(docsLink).isSymbolicLink()) {
+    const docsCandidate = path.join(ROOT, "docs", relDir, link);
+    if (fs.existsSync(docsCandidate)) return docsCandidate;
+  }
+
   // Try root first for paths that look absolute-ish
   if (
     [
