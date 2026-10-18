@@ -63,3 +63,93 @@
 .md-typeset table:not([class]) th {
   white-space: nowrap;
 }
+
+/* Disclaimer notice in the announcement bar (every page) */
+.md-banner .atd-notice p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.md-banner .atd-notice a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Touch targets of at least 44px for the phone numbers and the full text
+   link. The hit area is enlarged with an invisible overlay so the sentence
+   keeps its normal spacing. */
+.atd-tel,
+.atd-more {
+  position: relative;
+  font-weight: 700;
+}
+
+.atd-tel::after,
+.atd-more::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 44px);
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+.md-banner .atd-notice a:focus-visible,
+.atd-ack a:focus-visible,
+.atd-ack button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* One-time acknowledgment dialog (interactive tools only).
+   Colors come from Material's scheme variables, so it follows dark mode. */
+.atd-ack {
+  box-sizing: border-box;
+  width: min(40rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  padding: 1.25rem 1.25rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.atd-ack::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.md-typeset .atd-ack h2 {
+  margin-top: 0;
+}
+
+/* The title takes focus only so screen readers start at the top. */
+.md-typeset .atd-ack h2:focus {
+  outline: none;
+}
+
+.md-typeset .atd-ack ul {
+  margin-left: 1em;
+}
+
+.atd-ack__actions {
+  position: sticky;
+  bottom: 0;
+  margin: 0;
+  padding: 0.75rem 0 1rem;
+  background-color: var(--md-default-bg-color);
+}
+
+.md-typeset .atd-ack .md-button {
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atd-ack,
+  .atd-ack::backdrop {
+    animation: none;
+    transition: none;
+  }
+}

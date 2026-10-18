@@ -1,3 +1,7 @@
+---
+disclaimer_ack: true
+---
+
 # Interactive ROI Calculator
 
 > Estimate return on investment for public health interventions
