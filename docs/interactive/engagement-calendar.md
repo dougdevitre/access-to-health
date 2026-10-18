@@ -13,6 +13,7 @@ disclaimer_ack: true
 ---
 
 <div id="calendar-controls" style="margin-bottom: 1em;">
+  <div class="cal-field">
   <label for="month-filter"><strong>Month:</strong></label>
   <select id="month-filter" onchange="filterCalendar()">
     <option value="">All Months</option>
@@ -30,8 +31,10 @@ disclaimer_ack: true
     <option value="December">December</option>
     <option value="Year-Round">Year-Round</option>
   </select>
+  </div>
 
-  <label for="role-filter" style="margin-left: 1em;"><strong>Role:</strong></label>
+  <div class="cal-field">
+  <label for="role-filter"><strong>Role:</strong></label>
   <select id="role-filter" onchange="filterCalendar()">
     <option value="">All Roles</option>
     <option value="EPI">EPI — Epidemiologist</option>
@@ -53,20 +56,49 @@ disclaimer_ack: true
     <option value="PMG">PMG — Program Manager</option>
     <option value="QIC">QIC — QI Coordinator</option>
   </select>
+  </div>
 </div>
 
-<div id="calendar-count" style="margin-bottom: 1em; color: var(--md-default-fg-color--light);"></div>
+<div id="calendar-count" role="status" style="margin-bottom: 1em; color: var(--md-default-fg-color--light);"></div>
 
 <div id="calendar-entries"></div>
 
 <style>
+/* Filters stack on a phone and sit side by side when there is room. Each
+   select is 44px tall, never wider than the screen, and uses 16px text so
+   iOS does not zoom the page when it gets focus. */
+div#calendar-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+}
+.cal-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.cal-field select {
+  box-sizing: border-box;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.3em 0.4em;
+  font-size: max(16px, 1em);
+}
 .cal-entry {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
   padding: 1em 1.5em;
   margin: 0.75em 0;
 }
-.cal-entry h4 { margin: 0 0 0.5em 0; }
+/* Entries are h2 so the outline does not jump from the page h1 to h4; they
+   keep the look of the h4 they were. */
+.md-typeset .cal-entry h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
 .cal-meta { color: var(--md-default-fg-color--light); font-size: 0.9em; margin-bottom: 0.5em; }
 .cal-roles { display: inline-block; }
 .cal-role {
@@ -78,9 +110,11 @@ disclaimer_ack: true
   font-size: 0.8em;
   margin: 0.15em 0.15em;
 }
+/* A fixed deep orange (5.9:1 under white) rather than the accent, which is
+   a bright orange in the dark scheme. */
 .cal-pop {
   display: inline-block;
-  background: var(--md-accent-fg-color);
+  background: #b33c00;
   color: white;
   padding: 0.15em 0.5em;
   border-radius: 3px;
@@ -168,7 +202,7 @@ function filterCalendar() {
     }).join(' ');
 
     html += '<div class="cal-entry">' +
-      '<h4>' + e.obs + '</h4>' +
+      '<h2>' + e.obs + '</h2>' +
       '<div class="cal-meta">Week ' + e.week + ' — ' + e.month + '</div>' +
       '<p><strong>Actions:</strong> ' + e.action + '</p>' +
       '<p><strong>Roles:</strong> ' + rolesBadges + '</p>' +

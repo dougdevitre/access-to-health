@@ -16,7 +16,7 @@ disclaimer_ack: true
 
 <div id="roi-calculator">
   <label for="intervention"><strong>Intervention:</strong></label>
-  <select id="intervention" onchange="calculateROI()" style="margin-bottom: 0.5em; padding: 0.4em;">
+  <select id="intervention" class="roi-field" onchange="calculateROI()">
     <option value="childhood_immunization">Childhood Immunization Program</option>
     <option value="wic">WIC Nutrition Program</option>
     <option value="chw_program" selected>Community Health Worker Program</option>
@@ -29,19 +29,42 @@ disclaimer_ack: true
     <option value="school_sealants">School Dental Sealant Program</option>
   </select>
 
-  <br/>
   <label for="participants"><strong>Number of participants:</strong></label>
-  <input type="number" id="participants" value="100" min="1" max="1000000" onchange="calculateROI()" oninput="calculateROI()" style="padding: 0.4em; width: 120px;">
+  <input type="number" id="participants" class="roi-field roi-number" inputmode="numeric" value="100" min="1" max="1000000" onchange="calculateROI()" oninput="calculateROI()">
 
-  <br/><br/>
   <button class="md-button md-button--primary" onclick="calculateROI()">Calculate</button>
 </div>
 
 ---
 
+<p id="roi-status" class="roi-visually-hidden" role="status"></p>
+
 <div id="roi-results" style="margin-top: 1em;"></div>
 
 <style>
+/* 44px controls that never run wider than the phone. 16px text stops iOS
+   zooming the page when a field gets focus. */
+.roi-field {
+  box-sizing: border-box;
+  display: block;
+  min-height: 44px;
+  max-width: 100%;
+  margin: 0.25em 0 0.75em;
+  padding: 0.4em;
+  font-size: max(16px, 1em);
+}
+.roi-number { width: 10em; }
+.roi-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 .roi-card {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
@@ -82,6 +105,17 @@ function fmt(n) {
   return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 }
 
+// The result card re-renders on every keystroke, so it is not itself a live
+// region (a screen reader would read the whole card each time). A one-line
+// summary in a status region is announced instead, once typing pauses.
+var roiStatusTimer = null;
+function announceROI(message) {
+  clearTimeout(roiStatusTimer);
+  roiStatusTimer = setTimeout(function() {
+    document.getElementById('roi-status').textContent = message;
+  }, 600);
+}
+
 function calculateROI() {
   var key = document.getElementById('intervention').value;
   var n = parseInt(document.getElementById('participants').value) || 0;
@@ -111,6 +145,9 @@ function calculateROI() {
     'This investment returns ' + fmt(totalReturn) + ' in healthcare cost avoidance, productivity gains, and community value — a ' + ratio + ':1 return. ' +
     'Without it, these costs shift to emergency departments, lost productivity, and preventable suffering."</blockquote>' +
     '</div>';
+
+  announceROI(i.name + ', ' + n.toLocaleString() + ' participants: ' + ratio + ' to 1 return, ' +
+    fmt(netBenefit) + ' net benefit.');
 }
 
 calculateROI();
