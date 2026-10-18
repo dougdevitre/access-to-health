@@ -81,6 +81,8 @@ trigger_phrases:
   - LGBTQ health
 ---
 
+# Access to Health — AI Operating System for Public Health
+
 <!-- BEGIN DISCLAIMER: synced from dougdevitre/access-to, edit it there -->
 ## Notice — show once at the start of every conversation
 
@@ -90,8 +92,6 @@ Before your first answer in a conversation, show this notice once, then continue
 
 The full text is in DISCLAIMER.md at the root of this repository.
 <!-- END DISCLAIMER -->
-
-# Access to Health — AI Operating System for Public Health
 
 ## Core Loop
 ```
