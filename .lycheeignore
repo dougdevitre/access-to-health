@@ -1,0 +1,8 @@
+# Exclusions for the web-link half of the Link check workflow
+# (.github/workflows/link-check.yml). One regular expression per line, matched
+# against the URL. Every entry says why. tel: and mailto: are excluded in the
+# workflow's lychee args; internal links are checked by tools/validate-links.ts.
+
+# temporary — remove when the domain is reattached (dougdevitre.org, the Access To
+# hub, has been down since its CNAME was deleted on 2026-04-07).
+^https?://(www\.)?dougdevitre\.org

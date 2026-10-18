@@ -1,0 +1,145 @@
+name: Link check
+
+# One link check for the whole repo, extending the internal-link validator
+# that CI already runs (`npm run lint:links`, tools/validate-links.ts):
+#   - internal links: tools/validate-links.ts, unchanged. It knows how MkDocs
+#     resolves links through the docs/ symlinks, so lychee does not repeat it.
+#   - web links: lychee, over the Markdown and pages people read.
+# Triggers:
+#   - pull requests that touch content: fail, listing each broken link
+#   - monthly schedule and manual runs: open or update ONE issue,
+#     "Broken links (monthly check)", instead of failing silently
+# Exclusions live in .lycheeignore, each with a comment saying why. Never
+# delete crisis, clinical or benefits information to get this green.
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.html"
+      - "docs/**"
+      - "tools/validate-links.ts"
+      - ".lycheeignore"
+      - ".github/workflows/link-check.yml"
+  schedule:
+    - cron: "41 13 4 * *" # 13:41 UTC on the 4th of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  links:
+    name: Check links
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      # The runner image's preinstalled Node is enough for ts-node.
+      - name: Install dependencies
+        run: npm install
+
+      - name: Internal links (tools/validate-links.ts)
+        id: internal
+        run: |
+          mkdir -p lychee
+          set +e
+          npm run --silent lint:links > lychee/internal.txt 2>&1
+          code=$?
+          set -e
+          cat lychee/internal.txt
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+
+      - name: Collect the content people see
+        id: collect
+        run: |
+          # Markdown and HTML that MkDocs publishes or GitHub shows. Skips the
+          # docs/ symlinks (their targets are already listed), node_modules,
+          # build output and the changelog.
+          git ls-files -s -- '*.md' '*.html' \
+            | awk '$1 != "120000" { print $4 }' \
+            | grep -vE '(^|/)CHANGELOG\.md$|^(node_modules|dist|site)/' > lychee/files.txt
+          echo "Files: $(wc -l < lychee/files.txt)"
+          echo "files=$(tr '\n' ' ' < lychee/files.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Web links (lychee)
+        id: lychee
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          # 403 and 429 are accepted: they are bot-blocking and rate limiting
+          # (common on .gov and health-department sites), not dead links. 404,
+          # 410, DNS/connection errors and repeated 5xx still fail.
+          # --scheme keeps lychee to web links; internal links are the step above.
+          args: >-
+            --no-progress
+            --max-concurrency 8
+            --max-retries 3
+            --timeout 20
+            --accept 200..=299,403,429
+            --scheme https
+            --scheme http
+            --exclude '^tel:'
+            --exclude '^mailto:'
+            ${{ steps.collect.outputs.files }}
+          output: lychee/report.md
+          fail: false
+          jobSummary: true
+
+      - name: Fail the pull request on broken links
+        if: >-
+          github.event_name == 'pull_request' &&
+          (steps.lychee.outputs.exit_code != '0' || steps.internal.outputs.exit_code != '0')
+        run: |
+          echo "Broken links found. Fix each one with a confirmed replacement, or exclude the exact URL in .lycheeignore with a comment."
+          echo
+          if [ "${{ steps.internal.outputs.exit_code }}" != "0" ]; then
+            echo "## Internal links"; cat lychee/internal.txt; echo
+            grep -E '^  [^ ].*:[0-9]+$' lychee/internal.txt | while IFS= read -r line; do
+              echo "::error title=Broken internal link::${line#"${line%%[! ]*}"}"
+            done || true
+          fi
+          echo "## Web links"
+          cat lychee/report.md
+          # One annotation with every broken link (GitHub shows at most 10
+          # annotations per step, so one per link would hide the rest).
+          count="$(grep -cE '^\* \[' lychee/report.md || true)"
+          list="$(grep -E '^\* \[' lychee/report.md | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}' || true)"
+          [ "$count" = "0" ] || echo "::error title=${count} broken links::${list}"
+          exit 1
+
+      - name: Open or update the "Broken links (monthly check)" issue
+        if: >-
+          github.event_name != 'pull_request' &&
+          (steps.lychee.outputs.exit_code != '0' || steps.internal.outputs.exit_code != '0')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          INTERNAL_EXIT: ${{ steps.internal.outputs.exit_code }}
+        run: |
+          title="Broken links (monthly check)"
+          {
+            echo "The link check found broken links on $(date -u +%Y-%m-%d) ([run]($RUN_URL))."
+            echo
+            echo "Fix each link with a replacement you have confirmed loads the intended page. If none can be confirmed, exclude the exact URL in \`.lycheeignore\` with the comment \`BROKEN — needs a human\`. Never delete crisis, clinical or benefits information to make this pass."
+            echo
+            if [ "$INTERNAL_EXIT" != "0" ]; then
+              echo "## Internal links"; echo; echo '```'; cat lychee/internal.txt; echo '```'; echo
+            fi
+            echo "## Web links"; echo
+            cat lychee/report.md
+          } > lychee/issue.md
+          number="$(gh issue list --state open --search "\"$title\" in:title" --json number,title \
+            --jq "map(select(.title == \"$title\")) | .[0].number // empty")"
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file lychee/issue.md
+            gh issue comment "$number" --body "Updated by the link check on $(date -u +%Y-%m-%d): $RUN_URL"
+          else
+            gh issue create --title "$title" --body-file lychee/issue.md
+          fi
