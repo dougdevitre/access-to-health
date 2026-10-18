@@ -4,7 +4,7 @@
 
 **Comprehensive AI Operating System for Public Health Professionals**
 
-Part of the [CoTrackPro "Access To" Initiative](https://github.com/CoTrackPro) — open-source civic resource systems for justice, education, housing, services, peace, safety, and health.
+> Part of **[Access To](https://dougdevitre.org)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.org/#pillars) Built by [CoTrackPro](https://cotrackpro.com).
 
 ---
 
