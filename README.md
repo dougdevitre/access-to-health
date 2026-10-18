@@ -1,5 +1,10 @@
 # Access to Health
 
+<!-- BEGIN DISCLAIMER: synced from dougdevitre/access-to, edit it there -->
+> [!IMPORTANT]
+> **Educational information only.** Access to Health is not legal, medical, mental health, financial or safety advice, and using it creates no professional relationship. **In danger now? Call 911. For crisis support, call or text 988.** Confirm anything important with the official source or a licensed professional. Read the full [disclaimer](DISCLAIMER.md).
+<!-- END DISCLAIMER -->
+
 [![CI](https://github.com/dougdevitre/access-to-health/actions/workflows/ci.yml/badge.svg)](https://github.com/dougdevitre/access-to-health/actions/workflows/ci.yml)
 
 **Comprehensive AI Operating System for Public Health Professionals**
