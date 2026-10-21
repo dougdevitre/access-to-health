@@ -343,7 +343,7 @@
   "compliance_notes": {
     "hipaa": "All client data is PHI. Minimum necessary standard applies. Access controls required. Audit logs required. BAAs required with any vendor.",
     "42_cfr_part_2": "If substance use information is captured during screening, additional federal protections apply. Cannot be shared without specific written consent. Cannot be used in legal proceedings.",
-    "state_law": "Missouri RSMo 191.656 (STI confidentiality), RSMo 630 (mental health records). Check state-specific laws for additional protections.",
+    "state_law": "Missouri RSMo 191.656 (HIV test result confidentiality), RSMo 630 (mental health records). Check state-specific laws for additional protections.",
     "consent": "Written consent required before sharing individual-level data with any external organization. Consent must specify what data, with whom, for what purpose, and expiration date."
   }
 }

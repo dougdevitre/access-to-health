@@ -136,7 +136,7 @@ Response:
       "description": "Emergency shelter and housing services",
       "phone": "314-802-0700",
       "address": "800 N Tucker Blvd, St. Louis, MO 63101",
-      "hours": "24/7 intake",
+      "hours": "Call to confirm current hours",
       "eligibility": "Adults experiencing homelessness",
       "languages": ["en", "es"],
       "sdoh_domain": "housing",

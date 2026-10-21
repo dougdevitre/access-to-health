@@ -9,7 +9,7 @@
 
 **Comprehensive AI Operating System for Public Health Professionals**
 
-> Part of **[Access To](https://dougdevitre.org)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.org/#pillars) Built by [CoTrackPro](https://cotrackpro.com).
+> Part of **[Access To](https://dougdevitre.github.io/access-to/)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.github.io/access-to/about.html#pillars) Built by [CoTrackPro](https://cotrackpro.com).
 
 ---
 

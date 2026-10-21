@@ -154,6 +154,6 @@ Understanding these events is essential for any professional serving Black commu
 - Sickle Cell Disease Association: sicklecelldisease.org
 
 ### Crisis
-- 988 Suicide & Crisis Lifeline (available in all languages)
+- 988 Suicide & Crisis Lifeline (Spanish by call, text or chat; interpreters in 240+ languages on calls)
 - National DV Hotline: 1-800-799-7233
 - SAMHSA Helpline: 1-800-662-4357
