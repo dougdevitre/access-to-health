@@ -126,11 +126,11 @@ Community health workers are frontline public health professionals who share liv
 
 | Program | Eligibility | Where to Apply |
 |---------|-------------|---------------|
-| Medicaid (MO HealthNet) | ≤138% FPL (adults), ≤300% FPL (children/pregnant) | DSS/FSD office or online |
+| Medicaid (MO HealthNet) | ≤138% FPL (adults); children up to 300% FPL (CHIP premiums above 150%); pregnant ≤196% FPL, or ≤300% through Show-Me Healthy Babies | DSS/FSD office or online |
 | SNAP (food stamps) | ≤130% FPL gross income | DSS/FSD office or online |
-| WIC | Pregnant, postpartum, infants, children ≤5; income ≤185% FPL | Local WIC office (health department) |
+| WIC | Pregnant, postpartum, infants, children under 5; income ≤185% FPL | Local WIC office (health department) |
 | Marketplace insurance | Not Medicaid eligible; open enrollment or qualifying event | healthcare.gov |
-| LIHEAP (utility assistance) | ≤135% FPL or SNAP/TANF recipient | Community Action Agency |
+| LIHEAP (utility assistance) | ≤60% of state median income (Missouri limit as of Oct 1, 2026) | Community Action Agency |
 | Head Start / Early Head Start | ≤100% FPL; ages 0-5 | Local Head Start program |
 | Free/Reduced Lunch | ≤130% FPL (free), ≤185% FPL (reduced) | School district |
 | Social Security (SSI/SSDI) | Disability + income/asset limits | SSA office or ssa.gov |

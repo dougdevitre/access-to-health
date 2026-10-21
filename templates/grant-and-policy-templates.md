@@ -169,7 +169,7 @@ B. FRINGE BENEFITS (XX% of personnel)                 $[Total]
 [Rate breakdown: FICA, health insurance, retirement, workers comp, unemployment]
 
 C. TRAVEL                                             $[Total]
-[Local travel: mileage for outreach at $0.67/mile × estimated miles]
+[Local travel: mileage for outreach at the current IRS rate (76¢/mile from July 1, 2026) × estimated miles]
 [Conference travel: [conference name], [# staff], airfare + hotel + per diem]
 
 D. EQUIPMENT (>$5,000 per unit)                       $[Total]
@@ -187,7 +187,7 @@ G. OTHER                                              $[Total]
  translation services, meeting space rental, food for community events]
 
 H. INDIRECT COSTS (XX% of modified total direct costs) $[Total]
-[Federally negotiated rate or 10% de minimis if no negotiated rate]
+[Federally negotiated rate or 15% de minimis if no negotiated rate]
 
 TOTAL PROJECT COST                                     $[Total]
 ```

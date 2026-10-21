@@ -2,6 +2,7 @@
 
 > Match SDOH screening results to resources by domain and urgency tier
 > Missouri reference implementation. Nationally applicable framework.
+> Last verified: 2026-10-20 (hotline numbers and program status). Call ahead: local programs change.
 
 ---
 
@@ -35,7 +36,7 @@
 - **Rapid rehousing**: HUD-funded programs through local Continuum of Care
 - **Transitional housing**: Typically 6-24 months with supportive services
 - **Utility assistance**: LIHEAP, local utility company hardship programs
-- **Rental assistance**: Emergency Rental Assistance Program (ERAP), local community action agencies
+- **Rental assistance**: Local community action agencies and local emergency rental programs (the federal Emergency Rental Assistance program ended September 30, 2025)
 - **MO-specific**: Missouri Housing Development Commission, Beyond Housing (St. Louis County)
 
 ### Tier 3 — Long-Term
@@ -140,7 +141,7 @@
 - **Vocational training**: Trade schools, certificate programs
 - **Continuing education**: Professional development, licensure support
 - **Health literacy programs**: Understanding health information and navigating systems
-- **MO-specific**: A+ Scholarship Program, Missouri Department of Higher Education
+- **MO-specific**: A+ Scholarship Program, Missouri Department of Higher Education and Workforce Development
 
 ---
 
@@ -202,7 +203,7 @@
 - **Budget billing**: Level payment plans through utility companies
 - **Arrearage management**: Debt forgiveness programs for past-due balances
 - **Lifeline program**: Discounted phone/internet for low-income households
-- **ACP (Affordable Connectivity Program)**: Internet subsidy
+- **ACP (Affordable Connectivity Program)**: Ended June 1, 2024 (no new funding). Use Lifeline or internet providers' low-income plans instead
 
 ### Tier 3 — Long-Term
 - **Weatherization Assistance Program (WAP)**: Home energy efficiency upgrades (free for qualifying households)
@@ -229,7 +230,7 @@
 - **Quality childcare placement**: Through Child Care Resource & Referral
 - **Family childcare networks**: Licensed home-based providers
 - **Employer-supported childcare**: Dependent care FSA, on-site childcare advocacy
-- **MO-specific**: Missouri Child Care Aware, Child Care Resource & Referral network
+- **MO-specific**: Child Care Aware of Missouri, Child Care Resource & Referral network
 
 ---
 

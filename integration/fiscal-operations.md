@@ -86,7 +86,7 @@ A. PERSONNEL (typically 60-75% of total)
 B. OPERATING
    B1. Supplies (clinical, office, educational materials)
    B2. Travel (local mileage, conferences)
-   B3. Equipment (>$5,000 threshold for capitalization)
+   B3. Equipment (≥$10,000 per unit for federal awards made on or after Oct 1, 2024; $5,000 before)
    B4. Contractual services (IT, evaluation, interpretation)
    B5. Occupancy (rent, utilities, maintenance)
    B6. Communications (phone, internet, postage)
@@ -105,7 +105,7 @@ D. CAPITAL
 
 E. INDIRECT COSTS
    E1. Federally negotiated rate × modified total direct costs
-   E2. (Or 10% de minimis if no negotiated rate)
+   E2. (Or the 15% de minimis rate if no negotiated rate; 10% for federal awards made before Oct 1, 2024)
 
 TOTAL EXPENDITURES
 ```
@@ -118,11 +118,11 @@ TOTAL EXPENDITURES
 
 **Pre-Award**:
 - [ ] UEI (Unique Entity Identifier) active in SAM.gov
-- [ ] Indirect cost rate agreement current (or use 10% de minimis)
+- [ ] Indirect cost rate agreement current (or use the 15% de minimis rate)
 - [ ] Cost allocation plan for shared costs
 - [ ] Time and effort reporting system in place
 - [ ] Subrecipient vs. contractor determination documented
-- [ ] Audit current (Single Audit if >$750K federal expenditures)
+- [ ] Audit current (Single Audit if ≥$1M federal expenditures, fiscal years starting on or after Oct 1, 2024)
 
 **Award Management**:
 - [ ] Award terms and conditions reviewed by fiscal AND program staff
@@ -156,7 +156,7 @@ TOTAL EXPENDITURES
 | **Inadequate time/effort documentation** | Employees certify effort semi-annually. Match to budget |
 | **Missing procurement documentation** | Follow procurement thresholds. Document sole source justification |
 | **Subrecipient monitoring** | Annual risk assessment. Monitor per 2 CFR 200.332 |
-| **Indirect cost errors** | Apply correct rate to correct base. Exclude capital and subawards >$25K |
+| **Indirect cost errors** | Apply correct rate to correct base. Exclude capital and each subaward's amount over $50K ($25K for awards before Oct 1, 2024) |
 | **Drawdown timing** | Draw federal funds within 3 business days of expenditure (cash management) |
 | **Late reporting** | Set calendar reminders 2 weeks before due dates |
 | **Supplanting** | Federal funds supplement, not replace, existing funding. Document |
@@ -237,7 +237,7 @@ Also available as TypeScript: `tools/roi-calculator.ts`
 
 ### Single Audit (2 CFR 200 Subpart F)
 
-**Threshold**: Required when federal expenditures ≥$750,000 in a fiscal year.
+**Threshold**: Required when federal expenditures ≥$1,000,000 in a fiscal year (fiscal years starting on or after Oct 1, 2024; $750,000 before).
 
 **Preparation checklist**:
 - [ ] Schedule of expenditures of federal awards (SEFA) prepared
