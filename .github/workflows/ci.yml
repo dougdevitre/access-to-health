@@ -103,6 +103,8 @@ jobs:
           mcp/MCP-SCHEMA.md
           evals/EVAL-SUITE.md
           scripts/team-sops.md
+          scripts/build-skill-zip.sh
+          .github/scripts/check-skill-frontmatter.py
           schemas/sdoh-data-model.json
           schemas/fhir-sdoh-mapping.json
           templates/grant-and-policy-templates.md

@@ -162,6 +162,23 @@ flowchart LR
     H --> I
 ```
 
+## Use as a Claude Skill
+
+Add Access to Health to Claude at [claude.ai](https://claude.ai) in a few clicks. It works on the Free, Pro, Max, Team and Enterprise plans.
+
+1. **Download the install file:** [access-to-health.zip](https://github.com/dougdevitre/access-to-health/releases/download/skill-latest/access-to-health.zip)
+2. **Don't unzip it.** Claude needs the `.zip` file just as it downloaded.
+3. **Turn on code execution.** Skills need it.
+   - **Free, Pro or Max:** open **Settings > Capabilities** and turn on **Code execution and file creation**.
+   - **Team or Enterprise:** an organization owner opens **Organization settings > Plugins & skills**, clicks the **Policy** tab, and turns on both **Code execution and file creation** and **Skills**.
+4. **Upload it:** open **Customize > Skills**, click **+**, then **+ Create skill**, then **Upload a skill**, and choose `access-to-health.zip`.
+5. **Turn it on:** in **Customize > Skills**, switch on **access-to-health**. Claude will now use it for any public health question.
+
+These steps come from Claude's help center: [Use Skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+If the link 404s, the first release hasn't been published yet.
+
+Maintainers and forks: `scripts/build-skill-zip.sh` builds the same file into `dist/`. The Skill package workflow republishes it on every change to `main`.
+
 ## File Structure
 
 > ✅ = exists in repo — all files complete
@@ -245,7 +262,8 @@ access-to-health/                        46 files │ ~80,000 words
 │   └── EVAL-SUITE.md                 ✅ 50 test cases across 5 categories
 │
 ├── scripts/                             OPERATIONS
-│   └── team-sops.md                  ✅ 10 SOPs
+│   ├── team-sops.md                  ✅ 10 SOPs
+│   └── build-skill-zip.sh            ✅ Builds dist/access-to-health.zip for claude.ai upload
 ├── schemas/                             DATA
 │   └── sdoh-data-model.json          ✅ 5-table HIPAA-ready schema
 ├── templates/                           GRANT + POLICY
