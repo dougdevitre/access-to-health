@@ -57,7 +57,7 @@
 - Overdose deaths: ~80,000 in 2024 (provisional; down about 27% from ~110,000 in 2023; fentanyl dominant)
 - Alcohol use disorder: ~29 million adults
 - Opioid use disorder: ~2.7 million adults
-- Naloxone availability: Standing orders in most states
+- Naloxone availability: over-the-counter naloxone nasal spray is sold without a prescription in pharmacies, other stores and online (FDA approved the first one, Narcan 4 mg, on 2023-03-29)
 
 **Social Determinants**
 - Food insecurity: ~48 million Americans (2024)
