@@ -6,3 +6,8 @@
 # temporary — remove when the domain is reattached (dougdevitre.org, the Access To
 # hub, has been down since its CNAME was deleted on 2026-04-07).
 ^https?://(www\.)?dougdevitre\.org
+
+# The install file is published by .github/workflows/skill-package.yml when this
+# change reaches main, so it 404s until the first skill-latest release exists.
+# TEMPORARY: remove this line once the release is published.
+^https://github\.com/dougdevitre/access-to-health/releases/download/skill-latest/
