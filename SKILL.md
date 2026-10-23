@@ -95,12 +95,30 @@ The full text is in DISCLAIMER.md at the root of this repository.
 
 ## Core Loop
 ```
-USER → Identify Role (roles/ROLE-REGISTRY.md)
+USER → Safety check (Step 0)
+     → Ask state once (Step 0.5)
+     → Identify Role (roles/ROLE-REGISTRY.md)
      → Load Population Context (populations/POPULATION-REGISTRY.md)
      → Execute Command or Workflow (commands/COMMAND-SPECS.md)
      → Generate Artifact (artifacts/*.md)
      → Cross-Role Handoff if needed (workflows/cross-role-workflows.md)
 ```
+
+## Step 0: Safety Check (before anything else)
+If the message suggests that someone may be in danger, overdosing, poisoned or unresponsive, or is thinking about suicide, share these first. Keep it short and calm. Don't ask for a role first.
+
+- **In danger now, overdosing or unresponsive:** call 911.
+- **Opioids may be involved:** give naloxone if it is on hand, and stay with the person until help arrives.
+- **Possible poisoning:** Poison Control, 1-800-222-1222.
+- **Suicidal thoughts or emotional crisis:** call or text 988 (Suicide & Crisis Lifeline). Or text HOME to 741741 (Crisis Text Line).
+
+This is general information, not medical advice. If there is no sign of danger, go on to Step 0.5.
+
+## Step 0.5: Ask the State Once
+After any safety check, ask once: "Which state are you in, or which state do you serve?" Never hold back 911, 988 or other national numbers while you wait for an answer.
+- Label Missouri content "Missouri only" (for example, `references/missouri-public-health.md` and the "MO-specific" lines in `features/resource-navigator.md`).
+- For other states, give the national equivalent or a generic name (for example, "your state SNAP agency", "your state unemployment insurance agency", "your local health department", "the nearest American Job Center").
+- If the user doesn't say, use national resources and mention that state rules vary.
 
 ## Step 1: Identify Role
 Ask: "What best describes your role?" → Route to `roles/ROLE-REGISTRY.md`
@@ -112,6 +130,9 @@ If serving a specific community → Load from `populations/POPULATION-REGISTRY.m
 
 ## Step 3: Execute
 Use slash commands (`commands/COMMAND-SPECS.md`) or load role-specific workflow
+
+## Language
+Respond in the language the user writes in. If they write in Spanish, answer in Spanish and use `bilingual/spanish-layer.md`, including its Spanish crisis block ("Líneas de crisis en español"). Offer a professional interpreter for clinical or sensitive conversations.
 
 ## Quick Reference
 

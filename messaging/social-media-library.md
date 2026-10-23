@@ -82,13 +82,13 @@ MYTH: "Vaccines cause [concern]." FACT: [Evidence-based response with source]. W
 ## Category 5: Substance Use (3 posts)
 
 **Post 5.1 — Naloxone**
-Naloxone reverses opioid overdose in minutes. It's free, safe, and available without a prescription in Missouri. Pick up a kit at [locations]. You could save a life. #NaloxoneSavesLives #HarmReduction
+Naloxone reverses opioid overdose in minutes. It's safe, sold without a prescription, and free or low-cost through many health departments and community programs. Pick up a kit at [locations]. You could save a life. #NaloxoneSavesLives #HarmReduction
 
 **Post 5.2 — Recovery**
 Recovery is possible. Treatment works. If you or someone you love needs help: SAMHSA Helpline 1-800-662-4357 (free, confidential, 24/7). You don't have to do this alone. #RecoveryIsPossible #TreatmentWorks
 
 **Post 5.3 — Good Samaritan**
-Missouri's Good Samaritan law protects you when you call 911 for an overdose. Don't let fear keep you from making the call. The call that saves a life is always the right call. #GoodSamaritanLaw #CallDontRun
+Calling 911 for an overdose? In Missouri, the Good Samaritan law can protect you and the person overdosing from some charges, such as possession of drugs or paraphernalia and probation or parole violations. It does not cover active warrants, selling or making drugs, or other crimes. Learn more: time2act.mo.gov/goodsamaritan. Don't let fear keep you from making the call. The call that saves a life is always the right call. #GoodSamaritanLaw #CallDontRun
 
 ---
 

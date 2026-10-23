@@ -2,6 +2,7 @@
 
 > Match SDOH screening results to resources by domain and urgency tier
 > Missouri reference implementation. Nationally applicable framework.
+> Lines marked **MO-specific** are Missouri only. Ask the user's state once (see SKILL.md, Step 0.5); for other states, use the national or generic resource in the main bullets.
 > Last verified: 2026-10-20 (hotline numbers and program status). Call ahead: local programs change.
 
 ---
@@ -59,11 +60,12 @@
 - **MO-specific**: St. Louis Area Foodbank, Harvester's (Kansas City), Ozarks Food Harvest (Springfield)
 
 ### Tier 2 — Short-Term
-- **SNAP (food stamps)**: Application through DSS/FSD
+- **SNAP (food stamps)**: Apply through your state SNAP agency
 - **WIC**: Women, Infants, and Children nutrition program — through local health department
 - **Commodity Supplemental Food Program (CSFP)**: Monthly food box for seniors 60+
 - **Meals on Wheels**: Home-delivered meals for homebound adults
 - **Backpack programs**: Weekend food for school-age children
+- **MO-specific**: SNAP through Missouri DSS Family Support Division (FSD)
 
 ### Tier 3 — Long-Term
 - **Double Up Food Bucks**: SNAP dollars matched at farmers markets
@@ -84,11 +86,12 @@
 - **MO-specific**: Local Community Action Agencies, Salvation Army, St. Vincent de Paul
 
 ### Tier 2 — Short-Term
-- **Unemployment insurance**: Through Missouri Department of Labor
+- **Unemployment insurance**: Through your state unemployment insurance (UI) agency (find it with CareerOneStop's Unemployment Benefits Finder)
 - **Job training programs**: WIOA (Workforce Innovation and Opportunity Act) funded
-- **Job placement services**: Missouri Job Centers (formerly Career Centers)
+- **Job placement services**: American Job Centers (find one with CareerOneStop's American Job Center Finder)
 - **EITC/CTC assistance**: Free tax preparation (VITA sites) to claim refundable credits
 - **SSI/SSDI application assistance**: For people with disabilities
+- **MO-specific**: Unemployment insurance through Missouri Department of Labor; Missouri Job Centers (formerly Career Centers)
 
 ### Tier 3 — Long-Term
 - **Career development**: Community college, trade schools, apprenticeships
@@ -110,10 +113,10 @@
 
 ### Tier 2 — Short-Term
 - **FQHC enrollment**: Federally Qualified Health Centers (sliding scale, no insurance required)
-- **Medicaid application**: Through DSS/FSD or healthcare.gov
+- **Medicaid application**: Through your state Medicaid agency or healthcare.gov
 - **Marketplace enrollment**: ACA health insurance marketplace (open enrollment or special enrollment)
 - **Prescription assistance**: Manufacturer patient assistance programs, NeedyMeds, RxAssist, 340B pharmacies
-- **MO-specific**: Affinia Healthcare, Family Care Health Centers, Samuel Rodgers (Kansas City)
+- **MO-specific**: Medicaid application through Missouri DSS/FSD; Affinia Healthcare, Family Care Health Centers, Samuel Rodgers (Kansas City)
 
 ### Tier 3 — Long-Term
 - **Primary care medical home**: Ongoing relationship with provider
