@@ -98,7 +98,7 @@ Missouri's Good Samaritan law protects you when you call 911 for an overdose. Do
 Pregnant? New parent? Child under 5? WIC provides free healthy food, nutrition education, and breastfeeding support. You may qualify even with income. Call [number] or walk in to [location]. #WIC #HealthyFamilies
 
 **Post 6.2 — SNAP**
-SNAP helps families put healthy food on the table. If you're struggling, you're not alone — and help is available. Free application assistance at [location]. SNAP does NOT affect immigration status. #SNAP #FoodIsMedicine
+SNAP helps families put healthy food on the table. If you're struggling, you're not alone — and help is available. Free application assistance at [location]. Immigration questions? Talk to a DOJ-accredited representative or immigration attorney before you apply or stop a benefit (find one at justice.gov/eoir). #SNAP #FoodIsMedicine
 
 **Post 6.3 — Farmers Market**
 Double your dollars! Use SNAP at [farmers market name] and get $1 free for every $1 you spend on fruits and vegetables (up to $[X]). Fresh, local food for your family. [dates, location] #DoubleUp #FreshFood

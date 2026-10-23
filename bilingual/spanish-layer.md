@@ -199,16 +199,15 @@ A **promotora de salud** is a community health worker who is a trusted member of
 ## Immigration-Sensitive Service Delivery
 
 ### Public Charge Rule Guidance
-- As of current guidance, using the following programs does NOT affect immigration status:
-  - Medicaid (emergency or for children/pregnant persons)
-  - SNAP
-  - WIC
-  - CHIP
-  - Public health services (immunizations, communicable disease treatment)
-  - Emergency shelter
-  - Head Start
-- **Always check current policy** — rules change with administrations
-- Provide information, not legal advice. Refer to immigration legal services for individual guidance
+Use this dated note. Do not tell anyone that a benefit "does not count" or "won't affect" their immigration case.
+
+| English | Spanish |
+|---------|---------|
+| As of September 18, 2026, DHS can consider use of public benefits case by case in public charge decisions. Before you apply for or stop a benefit, talk to a DOJ-accredited representative or an immigration attorney (find one at justice.gov/eoir). Many people, such as refugees, asylees and survivors with U or T visas, are not subject to public charge. | Desde el 18 de septiembre de 2026, el DHS puede tomar en cuenta, caso por caso, el uso de beneficios públicos en las decisiones de carga pública. Antes de solicitar o dejar un beneficio, hable con un representante acreditado por el DOJ o con un abogado de inmigración (encuentre uno en justice.gov/eoir). Muchas personas, como refugiados, asilados y sobrevivientes con visa U o T, no están sujetas a la carga pública. |
+
+- **Never discourage an eligible person from getting care or benefits.** Share the note, then connect them to free legal help so they can decide with full information
+- This is educational information, not legal advice. Each person's case is different
+- **Always check current policy** — rules change. Review this note against uscis.gov at least every 6 months
 
 ### Safe Spaces Protocol
 - Health department services are available regardless of immigration status
