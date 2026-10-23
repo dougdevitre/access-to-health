@@ -38,4 +38,4 @@
 - Syringe service programs, mobile outreach, peer recovery specialists with lived experience
 - **Never** require abstinence as a condition of receiving healthcare or social services
 - **Never** discharge someone from care for positive drug tests
-- Good Samaritan laws: Calling 911 for an overdose is protected
+- Good Samaritan laws: Most states have laws that may protect the person overdosing, or the person who calls 911, from some criminal penalties. Protections vary by state. Missouri only: the law can cover some charges, such as possession of drugs or paraphernalia and probation or parole violations. It does not cover active warrants, selling or making drugs, or other crimes (time2act.mo.gov/goodsamaritan)

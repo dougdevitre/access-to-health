@@ -100,7 +100,7 @@
 - Medicaid expanded 2021 (138% FPL)
 - Naloxone standing order: Statewide
 - 988 active statewide
-- Good Samaritan law: Protection for calling 911 for overdose
+- Good Samaritan law: Limited protection when calling 911 for an overdose. It can cover some charges, such as possession of drugs or paraphernalia and probation or parole violations. It does not cover active warrants, selling or making drugs, or other crimes (time2act.mo.gov/goodsamaritan)
 
 ---
 

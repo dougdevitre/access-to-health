@@ -58,8 +58,8 @@
 - Secondary: First responders, faith communities, service providers
 
 **Key Messages**:
-- "Naloxone saves lives. It's free, safe, and available without a prescription in Missouri"
-- "You can't get in trouble for calling 911 for an overdose" (Good Samaritan law)
+- "Naloxone saves lives. It's safe, sold without a prescription, and free or low-cost through many health departments and community programs"
+- "Call 911 for an overdose. In Missouri, the Good Samaritan law can protect you and the person overdosing from some charges, such as possession of drugs or paraphernalia and probation or parole violations. It does not cover active warrants, selling or making drugs, or other crimes" (time2act.mo.gov/goodsamaritan)
 - "Carry it like you'd carry a first aid kit — you might save a life"
 
 **Equity Lens**:

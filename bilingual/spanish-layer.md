@@ -23,6 +23,22 @@
 
 ---
 
+## Líneas de crisis en español / Spanish Crisis Lines
+
+Share these first if someone may be in danger. Don't wait to finish a screening. Last verified: 2026-10-23.
+
+| Need | Español | English |
+|------|---------|---------|
+| In danger now | Si está en peligro ahora, llame al 911. | If you are in danger now, call 911. |
+| Suicide or emotional crisis | Línea 988 de Prevención del Suicidio y Crisis: llame al 988 y oprima 2, o envíe AYUDA por mensaje de texto al 988. En el chat, elija "Español". | 988 Suicide & Crisis Lifeline: call 988 and press 2, or text AYUDA to 988. In chat, choose "Español". |
+| Crisis by text | Crisis Text Line: envíe HOLA al 741741. | Crisis Text Line: text HOLA to 741741. |
+| Trans peer support | Trans Lifeline: llame al (877) 565-8860 y oprima 2 para español. Horario limitado: lunes a viernes, 1 p. m. a 9 p. m. hora del Este. | Trans Lifeline: call (877) 565-8860 and press 2 for Spanish. Limited hours: Monday to Friday, 1 PM to 9 PM Eastern. |
+| Possible poisoning | Control de Envenenamientos (Poison Control): 1-800-222-1222. | Poison Control: 1-800-222-1222. |
+
+Esta información es educativa, no es consejo médico. / This is educational information, not medical advice.
+
+---
+
 ## SDOH Screening Scripts (Spanish)
 
 ### Quick Screen — 5 Preguntas
