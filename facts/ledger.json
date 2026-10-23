@@ -1,0 +1,100 @@
+{
+  "$comment": "Fact ledger: every phone number, dollar figure, deadline and program-status claim this skill makes, with the primary source it was checked against. scripts/check-facts.mjs fails CI when a fact is past its recheck date (verified_on + recheck_days, or the explicit recheck_on), when a listed file is missing, or when the value (or each string in match) no longer appears in its files. Recheck intervals: phone numbers 180 days; dollar figures and program status 90; annual-cycle figures use recheck_on with the next cycle's date. To update a fact, re-verify it on the source, set verified_on to that day and, if the wording changed, update value/match. Never add a fact you have not verified yourself, and never back-date verified_on. docs/ holds symlinks to these files, so list the source path only.",
+  "recheck_days_default": 90,
+  "facts": [
+    {
+      "id": "poison-help-line",
+      "claim": "Poison Help line, 24/7, anywhere in the United States",
+      "value": "1-800-222-1222",
+      "source": "https://poisonhelp.hrsa.gov/the-poison-help-line/index.html",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["SKILL.md", "bilingual/spanish-layer.md", "features/resource-navigator.md"]
+    },
+    {
+      "id": "national-dv-hotline",
+      "claim": "National Domestic Violence Hotline, 24/7: 1-800-799-SAFE (7233); text START to 88788",
+      "value": "1-800-799-7233",
+      "source": "https://www.thehotline.org/",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["features/resource-navigator.md", "features/sdoh-screener.md", "populations/deep-dives/black-african-american.md"]
+    },
+    {
+      "id": "samhsa-national-helpline",
+      "claim": "SAMHSA National Helpline, free, confidential, 24/7/365, English and Spanish: 1-800-662-HELP (4357)",
+      "value": "1-800-662-4357",
+      "source": "https://www.samhsa.gov/find-help/helplines/national-helpline",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["features/resource-navigator.md", "messaging/social-media-library.md", "populations/deep-dives/black-african-american.md"]
+    },
+    {
+      "id": "rainn-sexual-assault-hotline",
+      "claim": "RAINN National Sexual Assault Hotline, 24/7, English and Spanish: 800-656-HOPE (4673)",
+      "value": "1-800-656-4673",
+      "source": "https://rainn.org/SUPPORT",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["features/resource-navigator.md"]
+    },
+    {
+      "id": "childhelp-hotline",
+      "claim": "Childhelp National Child Abuse Hotline, 24/7, call or text: 800-422-4453",
+      "value": "1-800-422-4453",
+      "source": "https://childhelphotline.org/?p=14",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["features/resource-navigator.md"]
+    },
+    {
+      "id": "mo-child-abuse-hotline",
+      "claim": "Missouri Child Abuse and Neglect Hotline, 24/7 (Missouri only)",
+      "value": "1-800-392-3738",
+      "source": "https://dss.mo.gov/cd/can.htm",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["features/resource-navigator.md"]
+    },
+    {
+      "id": "public-charge-rule-2026",
+      "claim": "DHS rescinded the 2022 public charge rule; the new rule took effect September 18, 2026 and officers weigh benefit use case by case (USCIS bulletin, 2026-07-16)",
+      "value": "As of September 18, 2026",
+      "match": ["September 18, 2026", "18 de septiembre de 2026"],
+      "source": "https://content.govdelivery.com/accounts/USDHSCIS/bulletins/420cbcb",
+      "verified_on": "2026-10-23",
+      "recheck_days": 90,
+      "files": ["bilingual/spanish-layer.md", "messaging/campaign-builder.md", "populations/POPULATION-REGISTRY.md", "roles/chw.md"]
+    },
+    {
+      "id": "988-spanish-options",
+      "claim": "988 Suicide & Crisis Lifeline in Spanish: call 988 and press 2, or text AYUDA to 988",
+      "value": "press 2",
+      "match": ["press 2", "oprima 2", "AYUDA"],
+      "source": "https://988lifeline.org/get-help/",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["bilingual/spanish-layer.md", "messaging/campaign-builder.md"]
+    },
+    {
+      "id": "crisis-text-line",
+      "claim": "Crisis Text Line: text HOME to 741741 (English) or HOLA to 741741 (Spanish)",
+      "value": "HOME to 741741",
+      "match": ["HOME to 741741", "HOLA to 741741", "HOLA al 741741"],
+      "source": "https://www.crisistextline.org/blog/2021/10/15/hola-crisis-text-line-is-now-available-in-spanish/",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["SKILL.md", "bilingual/spanish-layer.md"]
+    },
+    {
+      "id": "trans-lifeline",
+      "claim": "Trans Lifeline: (877) 565-8860, press 2 for Spanish; Monday to Friday, 1 PM to 9 PM Eastern (12 to 8 Central)",
+      "value": "(877) 565-8860",
+      "match": ["(877) 565-8860", "1 PM to 9 PM Eastern", "1 p. m. a 9 p. m."],
+      "source": "https://translifeline.org/hotline/",
+      "verified_on": "2026-10-23",
+      "recheck_days": 180,
+      "files": ["bilingual/spanish-layer.md"]
+    }
+  ]
+}
