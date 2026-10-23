@@ -143,14 +143,14 @@
 
 **Key Messages**:
 - "SNAP helps families put healthy food on the table — you may qualify"
-- "SNAP does not affect your immigration status" (critical for immigrant communities)
+- "Questions about immigration? Free, trusted help is available before you decide" (critical for immigrant communities; see the public charge note below)
 - "Free help applying is available at [locations]"
 
 **Equity Lens**:
 - Address stigma around food assistance
 - Bilingual application assistance
 - Target senior populations (lowest enrollment rate among eligible groups)
-- Clarify public charge rule — SNAP does NOT count
+- Public charge: share this dated note, not a promise. "As of September 18, 2026, DHS can consider use of public benefits case by case in public charge decisions. Before you apply for or stop a benefit, talk to a DOJ-accredited representative or an immigration attorney (find one at justice.gov/eoir). Many people, such as refugees, asylees and survivors with U or T visas, are not subject to public charge." Never discourage an eligible person from applying. Spanish version: `bilingual/spanish-layer.md`
 - Partner with food pantries, WIC, schools, senior centers
 
 **Channels**: Food pantries, WIC offices, schools (free/reduced lunch families), senior centers, FQHC waiting rooms, social media, community events, faith communities

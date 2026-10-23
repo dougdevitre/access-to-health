@@ -60,7 +60,7 @@
 - **Health profile**: Higher diabetes prevalence, lower insurance rates, occupational injuries, cervical cancer disparities, TB, Chagas disease in immigrants
 - **Structural drivers**: Immigration enforcement fear, language barriers, occupational hazards, educational access, residential instability
 - **Engagement**: Promotoras, Catholic churches, tiendas, soccer leagues, Spanish-language media, cultural events
-- **Screening**: Use bilingual screening tools (`bilingual/spanish-layer.md`). Clarify public charge — SNAP/WIC/Medicaid do NOT affect immigration
+- **Screening**: Use bilingual screening tools (`bilingual/spanish-layer.md`). For public charge questions, share the dated note in `bilingual/spanish-layer.md` (as of September 18, 2026, DHS can consider benefit use case by case) and refer to a DOJ-accredited representative or immigration attorney. Never discourage an eligible person from getting care or benefits
 - **Key roles**: CHW, NUT, PHN, HED, CES
 
 ### PRG — Pregnant and Postpartum

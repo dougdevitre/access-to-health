@@ -143,7 +143,7 @@ Community health workers are frontline public health professionals who share liv
 5. Follow up on determination
 6. Appeal if denied (connect with legal aid if needed)
 
-**Immigration note**: Clarify public charge rules. SNAP, WIC, Medicaid (emergency/children/pregnant), CHIP, and public health services do NOT affect immigration status under current guidance. Always check current policy. See `bilingual/spanish-layer.md`.
+**Immigration note (public charge)**: As of September 18, 2026, DHS can consider use of public benefits case by case in public charge decisions. Before you apply for or stop a benefit, talk to a DOJ-accredited representative or an immigration attorney (find one at justice.gov/eoir). Many people, such as refugees, asylees and survivors with U or T visas, are not subject to public charge. Never discourage an eligible person from getting care or benefits. This is educational information, not legal advice. Spanish version: `bilingual/spanish-layer.md`.
 
 ---
 
