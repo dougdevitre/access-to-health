@@ -136,6 +136,15 @@ jobs:
             python3 -c "import json; json.load(open('$f'))" && echo "VALID: $f" || exit 1
           done
 
+      # facts/ledger.json: every phone number, dollar figure, deadline and
+      # program-status claim, with its primary source and verified date. Fails
+      # when a fact is past its recheck date, a listed file is missing, or the
+      # text no longer carries the ledger's value.
+      - name: Check the fact ledger
+        run: |
+          node --test scripts/test/check-facts.test.mjs
+          node scripts/check-facts.mjs
+
       - name: Count files and words
         run: |
           files=$(find . \( -name "*.md" -o -name "*.json" -o -name "*.csv" -o -name "*.ts" -o -name "*.js" \) ! -path "./.git/*" ! -path "./node_modules/*" | wc -l)
