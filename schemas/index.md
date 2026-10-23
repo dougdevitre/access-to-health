@@ -47,6 +47,6 @@ Each domain maps to 5 FHIR R4 resource types: QuestionnaireResponse (screening),
 
 ## Related
 
-- [Cross-Sector Data Standards](../integration/cross-sector-data-standards.md) — Interoperability requirements and open data APIs
-- [Developer Guide](../integration/developer-guide.md) — Architecture, FHIR R4, SMART on FHIR
+- [Cross-Sector Data Standards](https://github.com/dougdevitre/access-to-health/blob/main/integration/cross-sector-data-standards.md) — Interoperability requirements and open data APIs (GitHub repo only)
+- [Developer Guide](https://github.com/dougdevitre/access-to-health/blob/main/integration/developer-guide.md) — Architecture, FHIR R4, SMART on FHIR (GitHub repo only)
 - [SDOH Screener](../features/sdoh-screener.md) — Screening tool that uses these schemas
