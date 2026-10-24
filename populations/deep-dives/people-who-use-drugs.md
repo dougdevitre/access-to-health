@@ -19,7 +19,7 @@
 
 | Intervention | Evidence |
 |-------------|----------|
-| **Naloxone distribution** | Reverses opioid overdose. No abuse potential. Available without prescription in most states |
+| **Naloxone distribution** | Reverses opioid overdose. No abuse potential. Over-the-counter naloxone nasal spray is sold without a prescription in pharmacies, other stores and online (FDA approved the first one, Narcan 4 mg, on 2023-03-29) |
 | **Syringe service programs** | Reduce HIV/HCV by 50%+. Do NOT increase drug use. Serve as entry point for treatment |
 | **Fentanyl test strips** | Allow people to test their supply. Reduce overdose deaths. Low-cost, high-impact |
 | **Medications for OUD** | Methadone, buprenorphine, naltrexone. Reduce overdose death by 50-75%. First-line treatment |
