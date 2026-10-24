@@ -1,7 +1,5 @@
 ---
 name: access-to-health
-version: 3.1.0
-org: CoTrackPro GitHub Org
 description: >
   Comprehensive AI operating system for public health professionals.
   20 roles, 25 populations, 50 eval cases, 25 slash commands with full
@@ -9,76 +7,25 @@ description: >
   Spanish layer, 42 AI prompts, 10 SOPs, 6 campaigns, 8 email sequences.
   Evidence-based, trauma-informed, equity-driven.
   Missouri reference implementation with national applicability.
-trigger_phrases:
-  - access to health
-  - public health
-  - social determinants
-  - SDOH
-  - health equity
-  - community health
-  - health education
-  - vaccination
-  - maternal health
-  - chronic disease
-  - mental health access
-  - substance use
-  - health literacy
-  - environmental health
-  - APHA
-  - health campaign
-  - health messaging
-  - public health workforce
-  - health funding
-  - health grant
-  - health policy
-  - community health worker
-  - CHW
-  - PRAPARE
-  - AHC screening
-  - epidemiologist
-  - outbreak
-  - contact tracing
-  - immunization
-  - food safety inspection
-  - health director
-  - emergency preparedness
-  - WIC
-  - lead poisoning
-  - school health
-  - behavioral health
-  - 988
-  - naloxone
-  - harm reduction
-  - opioid
-  - overdose
-  - tobacco cessation
-  - health disparities
-  - birth equity
-  - maternal mortality
-  - infant mortality
-  - doula
-  - promotora
-  - FQHC
-  - Medicaid
-  - health department
-  - CHNA
-  - Title V
-  - PHAB
-  - accreditation
-  - surveillance
-  - reportable disease
-  - crisis communication
-  - grant writing health
-  - quality improvement health
-  - PDSA
-  - environmental justice
-  - food insecurity
-  - refugee health
-  - immigrant health
-  - veteran health
-  - homeless health
-  - reentry health
-  - LGBTQ health
+metadata:
+  version: "3.1.0"
+  org: CoTrackPro GitHub Org
+  trigger_phrases: >-
+    access to health, public health, social determinants, SDOH, health
+    equity, community health, health education, vaccination, maternal
+    health, chronic disease, mental health access, substance use, health
+    literacy, environmental health, APHA, health campaign, health messaging,
+    public health workforce, health funding, health grant, health policy,
+    community health worker, CHW, PRAPARE, AHC screening, epidemiologist,
+    outbreak, contact tracing, immunization, food safety inspection, health
+    director, emergency preparedness, WIC, lead poisoning, school health,
+    behavioral health, 988, naloxone, harm reduction, opioid, overdose,
+    tobacco cessation, health disparities, birth equity, maternal mortality,
+    infant mortality, doula, promotora, FQHC, Medicaid, health department,
+    CHNA, Title V, PHAB, accreditation, surveillance, reportable disease,
+    crisis communication, grant writing health, quality improvement health,
+    PDSA, environmental justice, food insecurity, refugee health, immigrant
+    health, veteran health, homeless health, reentry health, LGBTQ health
 ---
 
 # Access to Health — AI Operating System for Public Health
@@ -175,7 +122,7 @@ Respond in the language the user writes in. If they write in Spanish, answer in 
 | Eval suite (50 cases) | `evals/EVAL-SUITE.md` |
 | Internal communication | `communication/internal-playbook.md` |
 | External communication | `communication/external-playbook.md` |
-| Audit report | `AUDIT.md` |
+| Audit report (GitHub repo only, not in the installed skill) | [`AUDIT.md`](https://github.com/dougdevitre/access-to-health/blob/main/AUDIT.md) |
 
 ## Guardrails (Always Active)
 

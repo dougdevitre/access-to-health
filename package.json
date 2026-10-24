@@ -17,6 +17,7 @@
     "serve": "npx ts-node tools/api-server.ts",
     "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore site",
     "lint:links": "ts-node tools/validate-links.ts",
+    "check:facts": "node --test scripts/test/check-facts.test.mjs && node scripts/check-facts.mjs",
     "test": "jest",
     "test:ci": "jest --ci --coverage",
     "check": "npm run build && npm run lint:md && npm run lint:links && npm test"
